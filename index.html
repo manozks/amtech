@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AmTech Systems – Unlock the Potential of Every F&B Outlet</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+<link href="css/style.css"  rel="stylesheet"/>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-pill bg-white/80">
+    <div class="nav-logo">
+      <img src="images/logo.png" alt="AmTech Systems Logo" class="nav-logo-img"/>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="flex px-4 py-2 mx-3 hidden md:block lg:block rounded-md button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">Get a Free Consultation</a>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="mobile-drawer" id="mobileDrawer" onclick="closeMobileMenu()"></div>
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-panel-header">
+    <img src="images/logo-mobile.png" alt="AmTech Systems"/>
+    <button class="mobile-close-btn" onclick="closeMobileMenu()">✕</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="#home" onclick="closeMobileMenu()">Home</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#services" onclick="closeMobileMenu()">Services</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+  <div class="mobile-nav-footer">
+    <a href="#contact" onclick="closeMobileMenu()">Get a Free Consultation</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-blob hero-blob1"></div>
+  <div class="hero-blob hero-blob2"></div>
+   <div class="hero-inner">
+    <div>
+      
+      <h1>Oracle Simphony POS Consulting for <em>Hospitality &amp; Enterprise</em></h1>
+      <p class="hero-sub">With 30+ years in hospitality and customer service leadership roles, along with 20+ years at Oracle and a track record spanning some of the largest Simphony deployments in the APAC region, AMTech Systems brings enterprise-grade expertise to every engagement — from initial design through to go-live and beyond.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-dark">Get a Free Consultation</a>
+        <a href="#solutions" class="btn-outline">Explore solutions →</a>
+      </div>
+    </div>
+   <div class="hero-visual">
+
+      <!-- Main Oracle card -->
+      <div class="hero-card" style="position:relative;">
+        <div class="hero-card-header" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+           <img src="images/about-bg.jpg" alt="Oracle Simphony POS Consulting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.75);z-index:0;"/>
+          <div style="display:flex;align-items:center;gap:.6rem; z-index:50;">
+            <div style="width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;font-family:'Red Hat Display',sans-serif;">O</div>
+            <span style="color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;">Oracle Simphony POS</span>
+          </div>
+          <span style="color:#000000;font-size:.72rem;font-weight:600;background:rgba(255,255,255,.15);padding:.2rem .6rem;border-radius:100px; z-index: 50;">APAC Region</span>
+        </div>
+        <div class="hero-card-body">
+
+          <!-- Experience badges row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-bottom:.9rem;">
+            <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
+              <div class="val" style="color:var(--accent);font-size:1.4rem;">30<span style="font-size:.9rem;">+</span></div>
+              <div class="lbl">Years Hospitality</div>
+            </div>
+            <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
+              <div class="val" style="color:var(--navy);font-size:1.4rem;">20<span style="font-size:.9rem;">+</span></div>
+              <div class="lbl">Years at Oracle</div>
+            </div>
+            <div class="stat-box" style="text-align:center;padding:.75rem .5rem;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.04));border:1px solid rgba(30,144,212,.15);">
+              <div class="val" style="color:var(--accent);font-size:1.4rem;">#1</div>
+              <div class="lbl">APAC Partner</div>
+            </div>
+          </div>
+
+          <!-- Deployment progress -->
+          <div style="background:var(--soft);border-radius:8px;padding:.85rem;margin-bottom:.75rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;">
+              <span style="font-size:.78rem;font-weight:700;color:var(--navy);">Simphony Deployments</span>
+              <span style="font-size:.78rem;font-weight:800;color:#c0392b;">Large-Scale APAC</span>
+            </div>
+            <div style="height:6px;background:#e5e9f2;border-radius:3px;overflow:hidden;">
+              <div style="width:88%;height:100%;background:linear-gradient(90deg,#c0392b,#e74c3c);border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:.3rem;">
+              <span style="font-size:.67rem;color:var(--mid);">Design → Go-Live → Beyond</span>
+              <span style="font-size:.67rem;font-weight:700;color:#c0392b;">88% complete avg.</span>
+            </div>
+          </div>
+
+          <!-- Service tags -->
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem;">
+            <span style="background:#fff0ee;border:1px solid #fcd5d0;color:#c0392b;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">POS Design</span>
+            <span style="background:#eff6ff;border:1px solid #bfdbfe;color:var(--blue);font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Implementation</span>
+            <span style="background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Go-Live Support</span>
+            <span style="background:#fefce8;border:1px solid #fde68a;color:#92400e;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Post-Live Care</span>
+          </div>
+
+          <!-- Enterprise scale indicator -->
+          <div style="background:linear-gradient(135deg,#0d2145,#1a4a8a);border-radius:8px;padding:.75rem 1rem;display:flex;align-items:center;gap:.75rem;">
+            <div style="width:32px;height:32px;background:rgba(255,255,255,.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🏢</div>
+            <div>
+              <div style="color:#fff;font-size:.78rem;font-weight:700;">Enterprise-Grade Engagements</div>
+              <div style="color:rgba(255,255,255,.55);font-size:.7rem;margin-top:.1rem;">Hotels · Stadiums · Airports · Theme Parks</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="floating-badge badge1" style="color:var(--accent)">
+          <span class="badge-dot"></span> 30+ yrs Oracle expertise
+        </div>
+       <!--  <div class="floating-badge badge2" style="color:var(--accent);">
+          <span class="badge-dot"></span> Largest APAC deployments
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED -->
+<div class="trusted">
+  <div class="trusted-inner">
+    <h3>Trusted by leading brands worldwide</h3>
+    <div class="logo-row">
+      <span class="brand-logo" style="font-size:1.1rem;font-weight:800;letter-spacing:.08em;">A</span>
+      <span class="brand-logo">IHG</span>
+      <span class="brand-logo" style="font-weight:800;">WYNDHAM</span>
+      <span class="brand-logo serif">LESPRI</span>
+      <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">Xarnett</span>    
+      <span class="brand-logo serif" style="font-size:.9rem;">Pullman</span>
+      <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">IBIS STYLES</span>
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+<!-- ABOUT -->
+<section id="about" style="padding:100px 2rem;background:#f4f6fb;overflow:hidden;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div class="about-grid" style="display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:center;">
+
+      <!-- LEFT: Visual -->
+      <div class="fade-in" style="position:relative;">
+       
+
+        <!-- Main photo frame -->
+        <div style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(13,33,69,.18);">
+          <!-- Photo placeholder with office/professional feel -->
+          <div style="height:520px;background:linear-gradient(160deg,#0d2145 0%,#1a4a8a 50%,#0f3460 100%);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;">
+
+            <!-- Background grid texture -->
+            <img src="images/hero-bg.jpg" alt="Oracle Simphony POS Consulting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.75);z-index:0;"/>
+
+    
+
+            <!-- Stats bar at bottom -->
+            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.35);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;z-index:1;">
+              <div style="text-align:center;">
+                <div style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;line-height:1;">20<span style="font-size:.9rem;color:rgba(255,255,255,.7);">+</span></div>
+                <div style="font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;">Yrs at Oracle</div>
+              </div>
+              <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);">
+                <div style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;line-height:1;">600<span style="font-size:.9rem;color:rgba(255,255,255,.7);">+</span></div>
+                <div style="font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;">Workstations</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;line-height:1;">30<span style="font-size:.9rem;color:rgba(255,255,255,.7);">+</span></div>
+                <div style="font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;">Countries</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating accent card — top right -->
+        <div style="position:absolute;top:-20px;right:-24px;background:#fff;border-radius:14px;box-shadow:0 12px 36px rgba(13,33,69,.14);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.6rem;border:1px solid #e5e9f2;z-index:2;">
+          <div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,rgba(192,57,43,.1),rgba(192,57,43,.05));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🏆</div>
+          <div>
+            <div style="font-weight:800;font-size:.8rem;color:#0d1117;white-space:nowrap;">APAC's Largest</div>
+            <div style="font-size:.7rem;color:#6b7280;">Simphony Deployments</div>
+          </div>
+        </div>
+
+        <!-- Floating accent card — bottom left -->
+        <div style="position:absolute;bottom:80px;left:-24px;background:#fff;border-radius:14px;box-shadow:0 12px 36px rgba(13,33,69,.14);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.6rem;border:1px solid #e5e9f2;z-index:2;">
+          <div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.05));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🌏</div>
+          <div>
+            <div style="font-weight:800;font-size:.8rem;color:#0d1117;white-space:nowrap;">3,000+ Terminals</div>
+            <div style="font-size:.7rem;color:#6b7280;">F&amp;B Chains Deployed</div>
+          </div>
+        </div>
+
+        <!-- Decorative dot pattern -->
+        <div style="position:absolute;bottom:-16px;right:-16px;width:80px;height:80px;background-image:radial-gradient(circle,#1a4a8a 1.5px,transparent 1.5px);background-size:12px 12px;opacity:.25;z-index:0;"></div>
+
+      </div>
+
+      <!-- RIGHT: Text Content -->
+      <div class="fade-in fd1">
+
+        <!-- Tag -->
+        <div style="display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)">About AM Tech Systems</div>
+
+        <!-- Headline -->
+        <h2 style="font-family:'Red Hat Display',sans-serif;font-size:clamp(1.85rem,3vw,2.6rem);font-weight:800;color:#0d1117;line-height:1.15;margin-bottom:1.5rem;">Enterprise Oracle Expertise, <em style="font-style:italic;color:var(--accent);">Personalised Service</em></h2>
+
+        <!-- Intro paragraph -->
+        <p style="font-size:.97rem;color:#374151;line-height:1.8;margin-bottom:1.5rem;">AM Tech Systems was founded by <strong style="color:#0d1117;font-weight:700;">Aaron McGowan</strong>, a Senior Oracle Implementation Consultant and Technical Lead with over <strong style="color:#0d1117;">10 years at Oracle Corporation</strong> and <strong style="color:#0d1117;">15+ years</strong> across hospitality and enterprise technology.</p>
+
+        <!-- Achievements paragraph -->
+        <p style="font-size:.97rem;color:#374151;line-height:1.8;margin-bottom:2rem;">Having delivered some of the largest Oracle Simphony deployments in the APAC region — including <strong style="color:#0d1117;">600+ workstation casino rollouts</strong>, <strong style="color:#0d1117;">3,000+ terminal food &amp; beverage chains</strong>, and restaurant groups spanning <strong style="color:#0d1117;">30+ countries</strong> — Aaron brings a rare combination of deep technical expertise and real-world operational experience to every project.</p>
+
+       
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT WE DO -->
+<section id="services" style="padding:100px 2rem;background:#fff;">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <!-- Header -->
+    <div style="max-width:660px;margin:0 auto 4rem;text-align:center;">
+      <div class="section-tag fade-in" style="display:inline-block;">What We Do</div>
+      <h2 class="section-title fade-in fd1">End-to-End Oracle Simphony <em>Consulting</em></h2>
+      <p style="color:var(--mid);font-size:.95rem;line-height:1.7;margin-top:.75rem;" class="fade-in fd2">From initial design through to go-live and beyond, AMTech Systems delivers end-to-end Oracle Simphony consulting across the full project lifecycle. Every engagement is handled personally by Aaron — bringing 20+ years of enterprise Oracle experience directly to your business.</p>
+    </div>
+
+    <!-- Services grid -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;" class="wwd-grid">
+
+      <!-- Card 1 -->
+      <div class="wwd-card fade-in" style="border:1px solid #e5e9f2;border-radius:16px;padding:2rem;background:#fff;transition:all .3s;cursor:default;position:relative;overflow:hidden;">
+        
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(192,57,43,.1),rgba(192,57,43,.04));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;">🚀</div>
+        <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.05rem;color:#0d1117;margin-bottom:.6rem;line-height:1.3;">New Simphony Implementations</h3>
+        <p style="font-size:.88rem;color:#6b7280;line-height:1.7;margin-bottom:1.25rem;">End-to-end Oracle Simphony POS deployments for single venues through to large-scale enterprise rollouts. From solution design and architecture through to configuration, testing, and go-live — we manage the full implementation lifecycle with precision and minimal disruption to your operations.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;">
+          <span style="font-size:.7rem;font-weight:700;background:#fff0ee;border:1px solid #fcd5d0;color:#c0392b;padding:.2rem .6rem;border-radius:100px;">Solution Design</span>
+          <span style="font-size:.7rem;font-weight:700;background:#f8faff;border:1px solid #e0ebff;color:#1a4a8a;padding:.2rem .6rem;border-radius:100px;">Configuration</span>
+          <span style="font-size:.7rem;font-weight:700;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;padding:.2rem .6rem;border-radius:100px;">Go-Live</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="wwd-card fade-in fd1" style="border:1px solid #e5e9f2;border-radius:16px;padding:2rem;background:#fff;transition:all .3s;cursor:default;position:relative;overflow:hidden;">
+       
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.04));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;">🔄</div>
+        <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.05rem;color:#0d1117;margin-bottom:.6rem;line-height:1.3;">Simphony Upgrades &amp; System Migrations</h3>
+        <p style="font-size:.88rem;color:#6b7280;line-height:1.7;margin-bottom:1.25rem;">Running an older version of Simphony or migrating from a legacy POS environment? We plan and execute upgrades and migrations that protect your data, preserve your configurations, and keep your business running smoothly throughout the transition.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;">
+          <span style="font-size:.7rem;font-weight:700;background:#eff6ff;border:1px solid #bfdbfe;color:#1a4a8a;padding:.2rem .6rem;border-radius:100px;">Upgrades</span>
+          <span style="font-size:.7rem;font-weight:700;background:#eff6ff;border:1px solid #bfdbfe;color:#1a4a8a;padding:.2rem .6rem;border-radius:100px;">Migrations</span>
+          <span style="font-size:.7rem;font-weight:700;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;padding:.2rem .6rem;border-radius:100px;">Data Protection</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="wwd-card fade-in fd2" style="border:1px solid #e5e9f2;border-radius:16px;padding:2rem;background:#fff;transition:all .3s;cursor:default;position:relative;overflow:hidden;">
+        
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(13,148,136,.1),rgba(13,148,136,.04));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;">💳</div>
+        <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.05rem;color:#0d1117;margin-bottom:.6rem;line-height:1.3;">Integrated Payment Solutions</h3>
+        <p style="font-size:.88rem;color:#6b7280;line-height:1.7;margin-bottom:1.25rem;">Specialist configuration and deployment of integrated payment solutions across Simphony environments. We ensure your payment system is reliable and fully integrated with your POS — reducing manual errors and streamlining the guest experience.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;">
+          <span style="font-size:.7rem;font-weight:700;background:#f0fdfa;border:1px solid #99f6e4;color:#0d9488;padding:.2rem .6rem;border-radius:100px;">Payment Config</span>
+          <span style="font-size:.7rem;font-weight:700;background:#f0fdfa;border:1px solid #99f6e4;color:#0d9488;padding:.2rem .6rem;border-radius:100px;">Integration</span>
+          <span style="font-size:.7rem;font-weight:700;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;padding:.2rem .6rem;border-radius:100px;">Testing</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="wwd-card fade-in" style="border:1px solid #e5e9f2;border-radius:16px;padding:2rem;background:#fff;transition:all .3s;cursor:default;position:relative;overflow:hidden;">
+       
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(124,58,237,.04));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;">🔌</div>
+        <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.05rem;color:#0d1117;margin-bottom:.6rem;line-height:1.3;">API Integration &amp; Testing</h3>
+        <p style="font-size:.88rem;color:#6b7280;line-height:1.7;margin-bottom:1.25rem;">Deep expertise across Oracle's full API suite including Transaction Services, BIAPI, and the Configuration &amp; Content API. Whether you're connecting loyalty platforms, property management systems, or third-party applications — we integrate and test solutions that work reliably at enterprise scale.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;">
+          <span style="font-size:.7rem;font-weight:700;background:#faf5ff;border:1px solid #e9d5ff;color:#7c3aed;padding:.2rem .6rem;border-radius:100px;">Transaction Services</span>
+          <span style="font-size:.7rem;font-weight:700;background:#faf5ff;border:1px solid #e9d5ff;color:#7c3aed;padding:.2rem .6rem;border-radius:100px;">BIAPI</span>
+          <span style="font-size:.7rem;font-weight:700;background:#faf5ff;border:1px solid #e9d5ff;color:#7c3aed;padding:.2rem .6rem;border-radius:100px;">Config &amp; Content API</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="wwd-card fade-in fd1" style="border:1px solid #e5e9f2;border-radius:16px;padding:2rem;background:#fff;transition:all .3s;cursor:default;position:relative;overflow:hidden;">
+       
+        <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,rgba(217,119,6,.1),rgba(217,119,6,.04));display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;">🎓</div>
+        <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.05rem;color:#0d1117;margin-bottom:.6rem;line-height:1.3;">Training &amp; Technical Documentation</h3>
+        <p style="font-size:.88rem;color:#6b7280;line-height:1.7;margin-bottom:1.25rem;">Empower your internal teams with the knowledge to manage and operate your Simphony environment confidently. We deliver tailored training programs, implementation guides, and technical documentation built around your specific system configuration and team requirements.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;">
+          <span style="font-size:.7rem;font-weight:700;background:#fffbeb;border:1px solid #fde68a;color:#d97706;padding:.2rem .6rem;border-radius:100px;">Training Programs</span>
+          <span style="font-size:.7rem;font-weight:700;background:#fffbeb;border:1px solid #fde68a;color:#d97706;padding:.2rem .6rem;border-radius:100px;">Guides</span>
+          <span style="font-size:.7rem;font-weight:700;background:#fffbeb;border:1px solid #fde68a;color:#d97706;padding:.2rem .6rem;border-radius:100px;">Tech Docs</span>
+        </div>
+      </div>
+
+      <!-- Card 6 — CTA card -->
+      <div class="fade-in fd2" style="border-radius:16px;padding:2rem;background:linear-gradient(135deg,#0d2145,#1a4a8a);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;border-radius:16px;"></div>
+        <div style="position:relative;z-index:1;">
+          <div style="width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:1.25rem;">💬</div>
+          <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;margin-bottom:.75rem;line-height:1.3;">Ready to Start Your Simphony Project?</h3>
+          <p style="font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:1.75rem;">Every engagement is handled personally by Aaron — bringing enterprise-grade Oracle expertise directly to your project, from day one.</p>
+        </div>
+        <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:.6rem;">
+          <a href="#contact" style="background:#fff;color:#0d2145;font-weight:800;font-size:.88rem;padding:.75rem 1.25rem;border-radius:10px;text-decoration:none;text-align:center;transition:all .2s;display:block;">Get a Free Consultation</a>
+         
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- FEATURES -->
+<section class="features" id="solutions">
+  <div class="section-inner" style="max-width:1100px;margin:0 auto;">
+    <div class="features-header">
+      <div class="section-tag fade-in" style="display:inline-block;">Platform Capabilities</div>
+      <h2 class="section-title fade-in fd1">Advanced Features Tailored for <em>Hospitality Excellence</em></h2>
+      <p style="color:var(--mid);font-size:.92rem;margin-top:.75rem;line-height:1.65;" class="fade-in fd2">Explore Skeat's comprehensive range of features designed to elevate F&B ordering and make every customer experience memorable.</p>
+    </div>
+
+    <!-- Main 3 features -->
+    <div class="features-main-grid">
+      <div class="feature-main-card fade-in">
+        <div class="fcard-preview blue">
+          <div class="mockup">
+            <div class="mockup-bar"></div>
+            <div class="mockup-lines">
+              <div class="mockup-line"></div>
+              <div class="mockup-line short"></div>
+              <div class="mockup-line"></div>
+              <div class="mockup-line short"></div>
+            </div>
+            <div class="mockup-btn"></div>
+          </div>
+          <div style="margin-left:12px;">
+            <div style="background:#fff;border-radius:8px;padding:.4rem .6rem;width:70px;margin-bottom:.5rem;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+              <div style="height:5px;background:#dbeafe;border-radius:2px;margin-bottom:.25rem;"></div>
+              <div style="height:5px;background:var(--accent);border-radius:2px;width:60%;"></div>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:.4rem .6rem;width:70px;box-shadow:0 2px 8px rgba(0,0,0,.1);">
+              <div style="height:14px;background:linear-gradient(90deg,var(--blue),var(--accent));border-radius:4px;font-size:.55rem;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;">ORDER</div>
+            </div>
+          </div>
+        </div>
+        <div class="fcard-body">
+          <h3>Order &amp; Pay</h3>
+          <p>Guests browse, order and pay directly from their phone. No app required. Works everywhere — restaurants, pool bars, in-room, events.</p>
+        </div>
+      </div>
+      <div class="feature-main-card fade-in fd1">
+        <div class="fcard-preview teal">
+          <div style="text-align:center;">
+            <div style="width:80px;height:80px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.1);margin:0 auto;">
+              <div style="width:50px;height:50px;background:linear-gradient(135deg,#111,#333);border-radius:6px;display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:4px;">
+                <div style="background:#fff;border-radius:1px;"></div><div style="background:#fff;border-radius:1px;"></div>
+                <div style="background:#fff;border-radius:1px;"></div><div style="background:transparent;"></div>
+              </div>
+            </div>
+            <div style="margin-top:.75rem;font-weight:700;font-size:.8rem;color:#0a3d2a;">Scan &amp; Order</div>
+          </div>
+        </div>
+        <div class="fcard-body">
+          <h3>Scan &amp; Pay</h3>
+          <p>QR codes at every table, sunbed, or room. Guests scan to access a fully branded digital menu and pay in seconds — zero friction.</p>
+        </div>
+      </div>
+      <div class="feature-main-card fade-in fd2">
+        <div class="fcard-preview warm">
+          <div style="background:#fff;border-radius:12px;padding:.75rem;width:120px;box-shadow:0 8px 20px rgba(0,0,0,.1);">
+            <div style="font-size:.65rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;">🛏 In-Room Dining</div>
+            <div style="height:4px;background:#fed7aa;border-radius:2px;margin-bottom:.25rem;"></div>
+            <div style="height:4px;background:#f97316;border-radius:2px;width:70%;margin-bottom:.5rem;"></div>
+            <div style="font-size:.6rem;color:var(--mid);line-height:1.4;">Breakfast in Bed<br/>Club Sandwich<br/>+ 48 items</div>
+          </div>
+        </div>
+        <div class="fcard-body">
+          <h3>In-Room Dining</h3>
+          <p>Elevate the in-room experience with a beautifully designed digital room service menu — orders sent directly to the kitchen.</p>
+        </div>
+      </div>
+    </div>
+
+  
+
+     </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section class="integrations" id="integrations">
+  <div class="int-inner">
+    <div class="int-header">
+      <div class="section-tag fade-in">Connected Ecosystem</div>
+      <h2 class="section-title fade-in fd1">Seamless Integrations with Leading <em>Hospitality &amp; Payment Providers</em></h2>
+      <p style="color:var(--mid);font-size:.92rem;line-height:1.7;max-width:500px;margin-top:.75rem;" class="fade-in fd2">AmTech connects with the systems you already use — so your team can get started without disruption.</p>
+    </div>
+    <div class="int-grid">
+      <div class="int-section fade-in">
+        <h4>POS Integration</h4>
+        <p style="font-size:.85rem;color:var(--mid);line-height:1.65;margin-bottom:1.25rem;">Certified integrations with the world's leading point-of-sale systems ensure orders flow seamlessly from guest device to kitchen display — no manual re-entry, no errors.</p>
+        <div class="int-logos">
+          <div class="int-logo-pill"><div class="dot" style="background:#e30000;"></div>Oracle MICROS</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#0066cc;"></div>Lightspeed</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#1daa00;"></div>Square</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#7c3aed;"></div>Revel</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#f59e0b;"></div>Simphony</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#06b6d4;"></div>Infrasys</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#10b981;"></div>Agilysys</div>
+        </div>
+      </div>
+      <div class="int-section fade-in fd2">
+        <h4>PMS Integration</h4>
+        <p style="font-size:.85rem;color:var(--mid);line-height:1.65;margin-bottom:1.25rem;">Post charges directly to guest folios, verify loyalty membership and sync guest data with your property management system — in real time.</p>
+        <div class="int-logos">
+          <div class="int-logo-pill"><div class="dot" style="background:#e30000;"></div>Oracle OPERA</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#0f172a;"></div>Mews</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#1a56db;"></div>Protel</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#059669;"></div>StayNTouch</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#7c3aed;"></div>Cloudbeds</div>
+          <div class="int-logo-pill"><div class="dot" style="background:#d97706;"></div>Amadeus</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact" style="overflow:hidden;">
+  <div style="max-width:1100px;margin:0 auto;">
+
+    <!-- Header -->
+    <div style="text-align:center;max-width:600px;margin:0 auto 4rem;">
+      <div class="fade-in" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:700; color:var(--accent);">Get In Touch</div>
+      <h2 class="fade-in fd1" style="font-family:'Red Hat Display',sans-serif;font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:800;color:#0d1117;line-height:1.15;margin-bottom:1rem;">Let's Talk About Your <em style="color:var(--accent);">Simphony Project</em></h2>
+      <p class="fade-in fd2" style="font-size:.97rem;color:#6b7280;line-height:1.75;">Every engagement starts with a conversation. Reach out directly to Aaron — no sales team, no waiting rooms.</p>
+    </div>
+
+    <!-- Two column layout -->
+    <div class="contact-layout" style="display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;align-items:start;">
+
+      <!-- LEFT: Info + Calendar -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+        <!-- Contact card -->
+        <div class="fade-in" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:1.75rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
+          <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;margin-bottom:1.25rem;">Contact Details</h3>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:flex;align-items:center;gap:.85rem;">
+              <div style="width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,rgba(192,57,43,.1),rgba(192,57,43,.04));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="fas fa-phone"></i></div>
+              <div>
+                <div style="font-size:.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.1rem;">Call</div>
+                <a href="tel:+61419616922" style="font-size:.9rem;font-weight:600;color:#0d1117;text-decoration:none;">+61 419 616 922</a>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:.85rem;">
+              <div style="width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,rgba(192,57,43,.1),rgba(192,57,43,.04));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div style="font-size:.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.1rem;">Email</div>
+                <a href="mailto:aaron@amtechsystems.com.au" style="font-size:.9rem;font-weight:600;color:#0d1117;text-decoration:none;">admin@amtechsystems.com.au</a>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:.85rem;">
+              <div style="width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.04));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div style="font-size:.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.1rem;">Location</div>
+                <div style="font-size:.9rem;font-weight:600;color:#0d1117;">Suite 1 Level 1 , 15 Portico Pde, Toongabbie, NSW 2146</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:.85rem;">
+              <div style="width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,rgba(13,148,136,.1),rgba(13,148,136,.04));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="fas fa-clock"></i></div>
+              <div>
+                <div style="font-size:.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.1rem;">Response Time</div>
+                <div style="font-size:.9rem;font-weight:600;color:#0d1117;">Within 24 hours</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Scheduler -->
+        <div class="fade-in fd1" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:1.75rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
+            <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;">Book an Appointment</h3>
+            <div style="display:flex;gap:.4rem;">
+              <button onclick="prevMonth()" style="width:28px;height:28px;border-radius:6px;border:1px solid #e5e9f2;background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;color:#374151;transition:all .2s;" onmouseover="this.style.background='#f4f6fb'" onmouseout="this.style.background='#fff'">‹</button>
+              <button onclick="nextMonth()" style="width:28px;height:28px;border-radius:6px;border:1px solid #e5e9f2;background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;color:#374151;transition:all .2s;" onmouseover="this.style.background='#f4f6fb'" onmouseout="this.style.background='#fff'">›</button>
+            </div>
+          </div>
+
+          <!-- Month label -->
+          <div id="calMonthLabel" style="font-weight:700;font-size:.88rem;color:#0d1117;margin-bottom:.9rem;text-align:center;"></div>
+
+          <!-- Day headers -->
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:.4rem;">
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Su</div>
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Mo</div>
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Tu</div>
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">We</div>
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Th</div>
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Fr</div>
+            <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Sa</div>
+          </div>
+
+          <!-- Calendar grid -->
+          <div id="calGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;"></div>
+
+          <!-- Time slots (shown after date pick) -->
+          <div id="timeSlotsWrap" style="display:none;margin-top:1.1rem;border-top:1px solid #f1f5f9;padding-top:1rem;">
+            <div style="font-size:.78rem;font-weight:700;color:#0d1117;margin-bottom:.6rem;" id="selectedDateLabel"></div>
+            <div id="timeSlots" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4rem;"></div>
+          </div>
+
+          <!-- Selected appointment summary -->
+          <div id="apptSummary" style="display:none;margin-top:1rem;background:linear-gradient(135deg,rgba(30,144,212,.06),rgba(26,74,138,.04));border:1px solid rgba(30,144,212,.18);border-radius:10px;padding:.85rem 1rem;">
+            <div style="font-size:.75rem;font-weight:700;color:#1a4a8a;margin-bottom:.2rem;">✓ Selected</div>
+            <div id="apptText" style="font-size:.88rem;font-weight:700;color:#0d1117;"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Contact Form -->
+      <div class="fade-in fd2" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:2.25rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
+
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #f1f5f9;">
+          <div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#0d2145,#1a4a8a);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">💬</div>
+          <div>
+            <div style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;">Send a Message</div>
+            <div style="font-size:.78rem;color:#94a3b8;margin-top:.1rem;">Amtechsystem typically responds within 24 hours</div>
+          </div>
+        </div>
+
+        <form id="contactForm" onsubmit="handleContactSubmit(event)" style="display:flex;flex-direction:column;gap:1.1rem;">
+
+          <!-- Name row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">First Name *</label>
+              <input type="text" required placeholder="John" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+            </div>
+            <div>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Last Name *</label>
+              <input type="text" required placeholder="Smith" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+            </div>
+          </div>
+
+          <!-- Email + Phone -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Email *</label>
+              <input type="email" required placeholder="john@company.com" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+            </div>
+            <div>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Phone</label>
+              <input type="tel" placeholder="+61 400 000 000" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+            </div>
+          </div>
+
+          <!-- Company + Country -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Company</label>
+              <input type="text" placeholder="Your Organisation" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+            </div>
+            <div>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Country</label>
+              <input type="text" placeholder="Australia" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+            </div>
+          </div>
+
+          <!-- Service interest -->
+          <div>
+            <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Service Interest *</label>
+            <select required style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'><path fill=\'%236b7280\' d=\'M4 6l4 4 4-4\'/></svg>');background-repeat:no-repeat;background-position:right .75rem center;background-size:16px;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'">
+              <option value="">Select a service...</option>
+              <option>New Simphony Implementation</option>
+              <option>Simphony Upgrade or Migration</option>
+              <option>Integrated Payment Solutions</option>
+              <option>API Integration &amp; Testing</option>
+              <option>Training &amp; Technical Documentation</option>
+              <option>General Oracle Simphony Consulting</option>
+            </select>
+          </div>
+
+    
+
+          <!-- Message -->
+          <div>
+            <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Message *</label>
+            <textarea required placeholder="Tell Aaron about your project — current POS environment, scale, timeline, and any specific challenges you're facing..." rows="4" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;resize:vertical;min-height:100px;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"></textarea>
+          </div>
+
+          <!-- Appointment reference -->
+          <div id="apptRef" style="display:none;background:rgba(30,144,212,.05);border:1px solid rgba(30,144,212,.2);border-radius:9px;padding:.75rem 1rem;font-size:.82rem;color:#1a4a8a;font-weight:600;">
+            📅 Appointment: <span id="apptRefText"></span>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" id="submitBtn" style="width:100%;background:#0d1117;color:#fff;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:.95rem;padding:1rem;border-radius:10px;border:none;cursor:pointer;transition:all .2s;margin-top:.25rem;letter-spacing:.01em;">
+            Send Message →
+          </button>
+
+          <!-- Success state -->
+          <div id="formSuccess" style="display:none;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:1.25rem;text-align:center;">
+            <div style="font-size:1.5rem;margin-bottom:.5rem;">✅</div>
+            <div style="font-weight:800;color:#15803d;font-size:.95rem;margin-bottom:.25rem;">Message Sent!</div>
+            <div style="font-size:.82rem;color:#16a34a;">Aaron will be in touch within 24 hours.</div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GLOBAL -->
+<section class="global" id="global">
+  <div class="global-inner">
+    <div class="section-tag fade-in" style="display:inline-block;">Global Reach</div>
+    <h2 class="section-title fade-in fd1">We deliver our solutions <em>globally</em></h2>
+    <p style="color:var(--mid);font-size:.95rem;line-height:1.7;max-width:520px;margin:.75rem auto 0;" class="fade-in fd2">From boutique properties to global hotel chains — our platform scales effortlessly across languages, currencies and time zones.</p>
+    <div class="global-stats">
+      <div class="gstat fade-in">
+        <div class="num">25<span>+</span></div>
+        <div class="lbl">Countries</div>
+      </div>
+      <div class="gstat fade-in fd1">
+        <div class="num">500<span>+</span></div>
+        <div class="lbl">Properties</div>
+      </div>
+      <div class="gstat fade-in fd2">
+        <div class="num">1500<span>+</span></div>
+        <div class="lbl">F&B Outlets</div>
+      </div>
+    </div>
+ 
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo text-white font-bold text-2xl text-gradient">
+       AMTECHSYSTEMS
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-socials">
+      <a class="social-btn" href="#">𝕏</a>
+      <a class="social-btn" href="#">in</a>
+      <a class="social-btn" href="#">f</a>
+      <a class="social-btn" href="#">📷</a>
+    </div>
+    <div class="footer-copy">© 2025 AmTech Systems. All rights reserved. Built for F&B excellence.</div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>30);
+});
+ 
+// Scroll animations
+const obs = new IntersectionObserver(e=>{
+  e.forEach(el=>{ if(el.isIntersecting) el.target.classList.add('visible'); });
+},{threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+ 
+// Mobile menu
+function toggleMobileMenu(){
+  const panel = document.getElementById('mobilePanel');
+  const drawer = document.getElementById('mobileDrawer');
+  const btn = document.getElementById('navHamburger');
+  const isOpen = panel.classList.contains('open');
+  if(isOpen){ closeMobileMenu(); } else {
+    panel.classList.add('open');
+    drawer.classList.add('open');
+    btn.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+}
+function closeMobileMenu(){
+  document.getElementById('mobilePanel').classList.remove('open');
+  document.getElementById('mobileDrawer').classList.remove('open');
+  document.getElementById('navHamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+ 
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+
+// ── CALENDAR ──
+let calDate = new Date();
+let selectedDate = null;
+let selectedTime = null;
+
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const TIMES = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM','1:00 PM','1:30 PM','2:00 PM','2:30 PM','3:00 PM','4:00 PM'];
+const BOOKED = [3,7,11,15,19]; // fake booked slot indices
+
+function renderCalendar(){
+  const y = calDate.getFullYear(), m = calDate.getMonth();
+  document.getElementById('calMonthLabel').textContent = MONTHS[m] + ' ' + y;
+  const grid = document.getElementById('calGrid');
+  grid.innerHTML = '';
+  const firstDay = new Date(y, m, 1).getDay();
+  const daysInMonth = new Date(y, m+1, 0).getDate();
+  const today = new Date();
+
+  // Empty cells
+  for(let i=0;i<firstDay;i++){
+    const cell = document.createElement('div');
+    cell.style.cssText = 'height:30px;';
+    grid.appendChild(cell);
+  }
+
+  for(let d=1;d<=daysInMonth;d++){
+    const cell = document.createElement('button');
+    cell.type = 'button';
+    const date = new Date(y,m,d);
+    const isPast = date < new Date(today.getFullYear(),today.getMonth(),today.getDate());
+    const isWeekend = date.getDay()===0||date.getDay()===6;
+    const isToday = date.toDateString()===today.toDateString();
+    const isSelected = selectedDate && date.toDateString()===selectedDate.toDateString();
+
+    cell.textContent = d;
+    cell.style.cssText = `width:100%;height:30px;border:none;border-radius:6px;font-family:'Red Hat Display',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .18s;`;
+
+    if(isSelected){
+      cell.style.background='#0d2145'; cell.style.color='#fff';
+    } else if(isToday){
+      cell.style.background='rgba(30,144,212,.12)'; cell.style.color='#1a4a8a'; cell.style.fontWeight='800';
+    } else if(isPast||isWeekend){
+      cell.style.background='transparent'; cell.style.color='#d1d5db'; cell.style.cursor='default';
+    } else {
+      cell.style.background='#f8faff'; cell.style.color='#0d1117';
+      cell.onmouseover=()=>{ if(!isSelected) cell.style.background='#dde8f8'; };
+      cell.onmouseout=()=>{ if(!isSelected) cell.style.background='#f8faff'; };
+    }
+
+    if(!isPast && !isWeekend){
+      cell.onclick = () => selectDate(new Date(y,m,d));
+    }
+    grid.appendChild(cell);
+  }
+}
+
+function selectDate(date){
+  selectedDate = date;
+  selectedTime = null;
+  renderCalendar();
+  renderTimeSlots(date);
+  updateApptSummary();
+}
+
+function renderTimeSlots(date){
+  const wrap = document.getElementById('timeSlotsWrap');
+  const label = document.getElementById('selectedDateLabel');
+  const container = document.getElementById('timeSlots');
+  label.textContent = 'Available times on ' + date.toLocaleDateString('en-AU',{weekday:'long',month:'long',day:'numeric'});
+  container.innerHTML = '';
+  wrap.style.display = 'block';
+
+  TIMES.forEach((t,i) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = t;
+    const booked = BOOKED.includes(i);
+    btn.style.cssText = `padding:.45rem .3rem;border-radius:7px;font-family:'Red Hat Display',sans-serif;font-size:.72rem;font-weight:700;border:1.5px solid;cursor:pointer;transition:all .18s;width:100%;`;
+    if(booked){
+      btn.style.borderColor='#f1f5f9'; btn.style.background='#f9fafb'; btn.style.color='#d1d5db'; btn.style.cursor='not-allowed'; btn.disabled=true;
+    } else {
+      btn.style.borderColor='#e5e9f2'; btn.style.background='#fff'; btn.style.color='#374151';
+      btn.onmouseover=()=>{ if(selectedTime!==t){ btn.style.borderColor='#1a4a8a'; btn.style.color='#1a4a8a'; btn.style.background='#eff6ff';} };
+      btn.onmouseout=()=>{ if(selectedTime!==t){ btn.style.borderColor='#e5e9f2'; btn.style.color='#374151'; btn.style.background='#fff';} };
+      btn.onclick=()=>selectTime(t);
+    }
+    container.appendChild(btn);
+  });
+}
+
+function selectTime(time){
+  selectedTime = time;
+  document.querySelectorAll('#timeSlots button').forEach(b=>{
+    if(b.textContent===time){ b.style.background='#0d2145'; b.style.borderColor='#0d2145'; b.style.color='#fff'; }
+    else if(!b.disabled){ b.style.background='#fff'; b.style.borderColor='#e5e9f2'; b.style.color='#374151'; }
+  });
+  updateApptSummary();
+}
+
+function updateApptSummary(){
+  const summary = document.getElementById('apptSummary');
+  const apptText = document.getElementById('apptText');
+  const apptRef = document.getElementById('apptRef');
+  const apptRefText = document.getElementById('apptRefText');
+  if(selectedDate && selectedTime){
+    const str = selectedDate.toLocaleDateString('en-AU',{weekday:'short',month:'short',day:'numeric'}) + ' at ' + selectedTime;
+    summary.style.display='block';
+    apptText.textContent = str;
+    apptRef.style.display='block';
+    apptRefText.textContent = str;
+  } else {
+    summary.style.display='none';
+  }
+}
+
+function prevMonth(){ calDate.setMonth(calDate.getMonth()-1); renderCalendar(); }
+function nextMonth(){ calDate.setMonth(calDate.getMonth()+1); renderCalendar(); }
+
+// Scale buttons
+function selectScale(btn, scale){
+  document.querySelectorAll('.scale-btn').forEach(b=>b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+// Form submit
+function handleContactSubmit(e){
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.textContent = 'Sending...';
+  btn.style.background='#1a4a8a';
+  btn.disabled=true;
+  setTimeout(()=>{
+    document.getElementById('contactForm').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  },1200);
+}
+
+// Init calendar on load
+document.addEventListener('DOMContentLoaded', renderCalendar);
+// fallback if DOMContentLoaded already fired
+if(document.readyState !== 'loading') renderCalendar();
+
+</script>
+
+
+</body>
+</html>
