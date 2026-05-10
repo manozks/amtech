@@ -469,13 +469,11 @@
     </div>
 
     <!-- Two column layout -->
-    <div class="contact-layout" style="display:grid;grid-template-columns:1fr 1.4fr;gap:2rem;align-items:start;">
+    <div class="contact-layout" style="display:grid;grid-template-columns:1fr 1.45fr;gap:2rem;align-items:start;">
 
       <!-- LEFT: Info + Calendar -->
       <div style="display:flex;flex-direction:column;gap:1.5rem;">
-
-        <!-- Contact card -->
-        <div class="fade-in" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:1.75rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
+   <div class="fade-in" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:1.75rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
           <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;margin-bottom:1.25rem;">Contact Details</h3>
           <div style="display:flex;flex-direction:column;gap:1rem;">
               <div style="display:flex;align-items:center;gap:.85rem;">
@@ -509,20 +507,18 @@
           </div>
         </div>
 
-        <!-- Appointment Scheduler -->
+        <!-- Calendar card -->
         <div class="fade-in fd1" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:1.75rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
-            <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;">Book an Appointment</h3>
+            <h3 style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;display:flex;align-items:center;gap:.5rem;"><i class="fas fa-calendar-days" style="color:#1a4a8a;"></i> Book an Appointment</h3>
             <div style="display:flex;gap:.4rem;">
-              <button onclick="prevMonth()" style="width:28px;height:28px;border-radius:6px;border:1px solid #e5e9f2;background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;color:#374151;transition:all .2s;" onmouseover="this.style.background='#f4f6fb'" onmouseout="this.style.background='#fff'">‹</button>
-              <button onclick="nextMonth()" style="width:28px;height:28px;border-radius:6px;border:1px solid #e5e9f2;background:#fff;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;color:#374151;transition:all .2s;" onmouseover="this.style.background='#f4f6fb'" onmouseout="this.style.background='#fff'">›</button>
+              <button type="button" id="prevMonthBtn" style="width:28px;height:28px;border-radius:6px;border:1px solid #e5e9f2;background:#fff;cursor:pointer;font-size:.85rem;color:#374151;display:flex;align-items:center;justify-content:center;transition:all .2s;"><i class="fas fa-chevron-left" style="font-size:.6rem;"></i></button>
+              <button type="button" id="nextMonthBtn" style="width:28px;height:28px;border-radius:6px;border:1px solid #e5e9f2;background:#fff;cursor:pointer;font-size:.85rem;color:#374151;display:flex;align-items:center;justify-content:center;transition:all .2s;"><i class="fas fa-chevron-right" style="font-size:.6rem;"></i></button>
             </div>
           </div>
 
-          <!-- Month label -->
           <div id="calMonthLabel" style="font-weight:700;font-size:.88rem;color:#0d1117;margin-bottom:.9rem;text-align:center;"></div>
 
-          <!-- Day headers -->
           <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:.4rem;">
             <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Su</div>
             <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Mo</div>
@@ -532,118 +528,138 @@
             <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Fr</div>
             <div style="text-align:center;font-size:.65rem;font-weight:700;color:#94a3b8;padding:.3rem 0;">Sa</div>
           </div>
-
-          <!-- Calendar grid -->
           <div id="calGrid" style="display:grid;grid-template-columns:repeat(7,1fr);gap:2px;"></div>
 
-          <!-- Time slots (shown after date pick) -->
+          <!-- Time slots -->
           <div id="timeSlotsWrap" style="display:none;margin-top:1.1rem;border-top:1px solid #f1f5f9;padding-top:1rem;">
             <div style="font-size:.78rem;font-weight:700;color:#0d1117;margin-bottom:.6rem;" id="selectedDateLabel"></div>
             <div id="timeSlots" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.4rem;"></div>
           </div>
 
           <!-- Selected appointment summary -->
-          <div id="apptSummary" style="display:none;margin-top:1rem;background:linear-gradient(135deg,rgba(30,144,212,.06),rgba(26,74,138,.04));border:1px solid rgba(30,144,212,.18);border-radius:10px;padding:.85rem 1rem;">
-            <div style="font-size:.75rem;font-weight:700;color:#1a4a8a;margin-bottom:.2rem;">✓ Selected</div>
-            <div id="apptText" style="font-size:.88rem;font-weight:700;color:#0d1117;"></div>
+          <div id="apptSummary" style="display:none;margin-top:1rem;background:linear-gradient(135deg,rgba(30,144,212,.06),rgba(26,74,138,.04));border:1px solid rgba(30,144,212,.2);border-radius:10px;padding:.85rem 1rem;">
+            <div style="font-size:.75rem;font-weight:700;color:#1a4a8a;margin-bottom:.25rem;"><i class="fas fa-circle-check"></i> Appointment Selected</div>
+            <div id="apptText" style="font-size:.9rem;font-weight:700;color:#0d1117;"></div>
+            <button type="button" onclick="clearAppointment()" style="margin-top:.5rem;font-size:.72rem;color:#94a3b8;background:none;border:none;cursor:pointer;font-family:'Red Hat Display',sans-serif;padding:0;text-decoration:underline;">Clear selection</button>
           </div>
+
+          <p style="font-size:.72rem;color:#94a3b8;margin-top:.9rem;line-height:1.5;"><i class="fas fa-info-circle"></i> Selecting a time pre-fills the form. Aaron will confirm your appointment by email.</p>
         </div>
 
       </div>
 
-      <!-- RIGHT: Contact Form -->
+      <!-- RIGHT: Contact Form (Formspree) -->
       <div class="fade-in fd2" style="background:#fff;border-radius:16px;border:1px solid #e5e9f2;padding:2.25rem;box-shadow:0 4px 20px rgba(13,33,69,.05);">
 
         <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid #f1f5f9;">
-          <div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#0d2145,#1a4a8a);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">💬</div>
+          <div style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#0d2145,#1a4a8a);display:flex;align-items:center;justify-content:center;"><i class="fas fa-paper-plane" style="color:#fff;font-size:1rem;"></i></div>
           <div>
             <div style="font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:1rem;color:#0d1117;">Send a Message</div>
-            <div style="font-size:.78rem;color:#94a3b8;margin-top:.1rem;">Amtechsystem typically responds within 24 hours</div>
+            <div style="font-size:.78rem;color:#94a3b8;margin-top:.1rem;">Aaron typically responds within 24 hours</div>
           </div>
         </div>
 
-        <form id="contactForm" onsubmit="handleContactSubmit(event)" style="display:flex;flex-direction:column;gap:1.1rem;">
+        <!-- Formspree form — replace YOUR_FORM_ID with your Formspree endpoint ID -->
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:1.1rem;">
 
-          <!-- Name row -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <!-- Web3Forms access key — replace with your key from web3forms.com -->
+          <input type="hidden" name="access_key" value="c8fb1116-f375-4d47-bca4-2f6cc1ee647d"/>
+          <!-- Subject line in inbox -->
+          <input type="hidden" name="subject" value="New Enquiry — AMTech Systems Website"/>
+          <!-- Redirect after submit (leave blank for AJAX) -->
+          <input type="hidden" name="redirect" value="false"/>
+          <!-- Honeypot spam protection -->
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off"/>
+          <!-- Hidden appointment field -->
+          <input type="hidden" name="appointment" id="hiddenAppointment" value=""/>
+          <!-- Hidden project scale -->
+          <input type="hidden" name="project_scale" id="hiddenScale" value=""/>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-row">
             <div>
-              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">First Name *</label>
-              <input type="text" required placeholder="John" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">First Name <span style="color:#c0392b;">*</span></label>
+              <input type="text" name="first_name" required placeholder="John" class="form-input"/>
             </div>
             <div>
-              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Last Name *</label>
-              <input type="text" required placeholder="Smith" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Last Name <span style="color:#c0392b;">*</span></label>
+              <input type="text" name="last_name" required placeholder="Smith" class="form-input"/>
             </div>
           </div>
 
-          <!-- Email + Phone -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-row">
             <div>
-              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Email *</label>
-              <input type="email" required placeholder="john@company.com" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+              <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Email <span style="color:#c0392b;">*</span></label>
+              <input type="email" name="email" required placeholder="john@company.com" class="form-input"/>
             </div>
             <div>
               <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Phone</label>
-              <input type="tel" placeholder="+61 400 000 000" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+              <input type="tel" name="phone" placeholder="+61 400 000 000" class="form-input"/>
             </div>
           </div>
 
-          <!-- Company + Country -->
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;" class="form-row">
             <div>
               <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Company</label>
-              <input type="text" placeholder="Your Organisation" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+              <input type="text" name="company" placeholder="Your Organisation" class="form-input"/>
             </div>
             <div>
               <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Country</label>
-              <input type="text" placeholder="Australia" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"/>
+              <input type="text" name="country" placeholder="Australia" class="form-input"/>
             </div>
           </div>
 
-          <!-- Service interest -->
           <div>
-            <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Service Interest *</label>
-            <select required style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;cursor:pointer;appearance:none;background-image:url('data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 16 16\'><path fill=\'%236b7280\' d=\'M4 6l4 4 4-4\'/></svg>');background-repeat:no-repeat;background-position:right .75rem center;background-size:16px;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'">
-              <option value="">Select a service...</option>
-              <option>New Simphony Implementation</option>
-              <option>Simphony Upgrade or Migration</option>
-              <option>Integrated Payment Solutions</option>
-              <option>API Integration &amp; Testing</option>
-              <option>Training &amp; Technical Documentation</option>
-              <option>General Oracle Simphony Consulting</option>
-            </select>
+            <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Service Interest <span style="color:#c0392b;">*</span></label>
+            <div style="position:relative;">
+              <select name="service" required class="form-input" style="appearance:none;padding-right:2.5rem;cursor:pointer;">
+                <option value="">Select a service...</option>
+                <option>New Simphony Implementation</option>
+                <option>Simphony Upgrade or Migration</option>
+                <option>Integrated Payment Solutions</option>
+                <option>API Integration &amp; Testing</option>
+                <option>Training &amp; Technical Documentation</option>
+                <option>General Oracle Simphony Consulting</option>
+              </select>
+              <i class="fas fa-chevron-down" style="position:absolute;right:.9rem;top:50%;transform:translateY(-50%);color:#6b7280;font-size:.7rem;pointer-events:none;"></i>
+            </div>
           </div>
 
-    
 
-          <!-- Message -->
+
+          <!-- Appointment reference display -->
+          <div id="apptRef" style="display:none;background:rgba(30,144,212,.05);border:1px solid rgba(30,144,212,.2);border-radius:9px;padding:.75rem 1rem;display:flex;align-items:center;gap:.6rem;">
+            <i class="fas fa-calendar-check" style="color:#1a4a8a;flex-shrink:0;"></i>
+            <span style="font-size:.85rem;font-weight:600;color:#1a4a8a;">Appointment: </span>
+            <span id="apptRefText" style="font-size:.85rem;color:#374151;font-weight:700;"></span>
+          </div>
+
           <div>
-            <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Message *</label>
-            <textarea required placeholder="Tell Aaron about your project — current POS environment, scale, timeline, and any specific challenges you're facing..." rows="4" style="width:100%;padding:.75rem 1rem;border:1.5px solid #e5e9f2;border-radius:9px;font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;background:#fff;transition:border-color .2s;outline:none;resize:vertical;min-height:100px;" onfocus="this.style.borderColor='#1a4a8a'" onblur="this.style.borderColor='#e5e9f2'"></textarea>
+            <label style="display:block;font-size:.75rem;font-weight:700;color:#374151;letter-spacing:.04em;text-transform:uppercase;margin-bottom:.4rem;">Message <span style="color:#c0392b;">*</span></label>
+            <textarea name="message" required placeholder="Tell Aaron about your project — current POS environment, scale, timeline, and any specific challenges you're facing..." rows="4" class="form-input" style="resize:vertical;min-height:110px;"></textarea>
           </div>
 
-          <!-- Appointment reference -->
-          <div id="apptRef" style="display:none;background:rgba(30,144,212,.05);border:1px solid rgba(30,144,212,.2);border-radius:9px;padding:.75rem 1rem;font-size:.82rem;color:#1a4a8a;font-weight:600;">
-            📅 Appointment: <span id="apptRefText"></span>
-          </div>
+          <!-- Formspree note -->
+          <p style="font-size:.73rem;color:#94a3b8;margin:-.25rem 0;line-height:1.5;"><i class="fas fa-lock" style="font-size:.65rem;"></i> Your information is secure and will only be used to respond to your enquiry.</p>
 
-          <!-- Submit -->
-          <button type="submit" id="submitBtn" style="width:100%;background:#0d1117;color:#fff;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:.95rem;padding:1rem;border-radius:10px;border:none;cursor:pointer;transition:all .2s;margin-top:.25rem;letter-spacing:.01em;">
-            Send Message →
+          <button type="submit" id="submitBtn" style="width:100%;background:#0d1117;color:#fff;font-family:'Red Hat Display',sans-serif;font-weight:800;font-size:.95rem;padding:1rem;border-radius:10px;border:none;cursor:pointer;transition:all .2s;letter-spacing:.01em;display:flex;align-items:center;justify-content:center;gap:.6rem;">
+            <i class="fas fa-paper-plane"></i> Send Message
           </button>
 
-          <!-- Success state -->
-          <div id="formSuccess" style="display:none;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:1.25rem;text-align:center;">
-            <div style="font-size:1.5rem;margin-bottom:.5rem;">✅</div>
-            <div style="font-weight:800;color:#15803d;font-size:.95rem;margin-bottom:.25rem;">Message Sent!</div>
-            <div style="font-size:.82rem;color:#16a34a;">Aaron will be in touch within 24 hours.</div>
-          </div>
-
         </form>
+
+        <!-- Success state (shown via JS after Formspree redirects back or AJAX) -->
+        <div id="formSuccess" style="display:none;text-align:center;padding:2rem 0;">
+          <div style="width:64px;height:64px;border-radius:50%;background:#f0fdf4;border:2px solid #bbf7d0;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;"><i class="fas fa-circle-check" style="color:#16a34a;font-size:1.6rem;"></i></div>
+          <div style="font-family:'Red Hat Display',sans-serif;font-weight:800;color:#15803d;font-size:1.1rem;margin-bottom:.5rem;">Message Sent!</div>
+          <div style="font-size:.9rem;color:#6b7280;line-height:1.65;">Thanks for reaching out. Aaron will be in touch within 24 hours to discuss your project.</div>
+          <button onclick="resetForm()" style="margin-top:1.25rem;font-size:.82rem;color:#1a4a8a;background:none;border:1px solid #1a4a8a;border-radius:7px;padding:.45rem 1rem;cursor:pointer;font-family:'Red Hat Display',sans-serif;font-weight:600;">Send another message</button>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- GLOBAL -->
@@ -737,148 +753,198 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 
-// ── CALENDAR ──
-let calDate = new Date();
-let selectedDate = null;
-let selectedTime = null;
+</script>
 
-const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const TIMES = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM','1:00 PM','1:30 PM','2:00 PM','2:30 PM','3:00 PM','4:00 PM'];
-const BOOKED = [3,7,11,15,19]; // fake booked slot indices
+<script>
+// ── CALENDAR ENGINE ──
+const CAL_MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const TIME_SLOTS = ['9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM','1:00 PM','1:30 PM','2:00 PM','2:30 PM','3:00 PM','3:30 PM','4:00 PM','4:30 PM'];
 
-function renderCalendar(){
-  const y = calDate.getFullYear(), m = calDate.getMonth();
-  document.getElementById('calMonthLabel').textContent = MONTHS[m] + ' ' + y;
+let calCurrent = new Date();
+let calSelected = null;
+let calSelectedTime = null;
+
+// Simulate some booked slots per date (in real use, fetch from backend)
+function getBookedSlots(dateStr) {
+  const seed = dateStr.split('').reduce((a,c)=>a+c.charCodeAt(0),0);
+  const booked = new Set();
+  for(let i=0;i<3;i++) booked.add((seed*(i+7))%TIME_SLOTS.length);
+  return booked;
+}
+
+function renderCalendar() {
+  const y = calCurrent.getFullYear(), m = calCurrent.getMonth();
+  document.getElementById('calMonthLabel').textContent = CAL_MONTHS[m] + ' ' + y;
   const grid = document.getElementById('calGrid');
   grid.innerHTML = '';
-  const firstDay = new Date(y, m, 1).getDay();
-  const daysInMonth = new Date(y, m+1, 0).getDate();
-  const today = new Date();
+  const today = new Date(); today.setHours(0,0,0,0);
+  const firstDay = new Date(y,m,1).getDay();
+  const daysInMonth = new Date(y,m+1,0).getDate();
 
-  // Empty cells
   for(let i=0;i<firstDay;i++){
-    const cell = document.createElement('div');
-    cell.style.cssText = 'height:30px;';
-    grid.appendChild(cell);
+    const blank = document.createElement('div');
+    blank.style.height='30px';
+    grid.appendChild(blank);
   }
-
   for(let d=1;d<=daysInMonth;d++){
-    const cell = document.createElement('button');
-    cell.type = 'button';
-    const date = new Date(y,m,d);
-    const isPast = date < new Date(today.getFullYear(),today.getMonth(),today.getDate());
+    const date = new Date(y,m,d); date.setHours(0,0,0,0);
+    const isPast = date < today;
     const isWeekend = date.getDay()===0||date.getDay()===6;
-    const isToday = date.toDateString()===today.toDateString();
-    const isSelected = selectedDate && date.toDateString()===selectedDate.toDateString();
-
-    cell.textContent = d;
-    cell.style.cssText = `width:100%;height:30px;border:none;border-radius:6px;font-family:'Red Hat Display',sans-serif;font-size:.78rem;font-weight:600;cursor:pointer;transition:all .18s;`;
-
-    if(isSelected){
-      cell.style.background='#0d2145'; cell.style.color='#fff';
-    } else if(isToday){
-      cell.style.background='rgba(30,144,212,.12)'; cell.style.color='#1a4a8a'; cell.style.fontWeight='800';
-    } else if(isPast||isWeekend){
-      cell.style.background='transparent'; cell.style.color='#d1d5db'; cell.style.cursor='default';
-    } else {
-      cell.style.background='#f8faff'; cell.style.color='#0d1117';
-      cell.onmouseover=()=>{ if(!isSelected) cell.style.background='#dde8f8'; };
-      cell.onmouseout=()=>{ if(!isSelected) cell.style.background='#f8faff'; };
+    const isToday = date.getTime()===today.getTime();
+    const isSelected = calSelected && date.getTime()===calSelected.getTime();
+    const btn = document.createElement('button');
+    btn.type='button'; btn.textContent=d;
+    btn.style.cssText='width:100%;height:30px;border:none;border-radius:6px;font-family:Red Hat Display,sans-serif;font-size:.78rem;font-weight:600;transition:all .18s;box-sizing:border-box;';
+    if(isSelected){ btn.style.cssText+='background:#0d2145;color:#fff;cursor:pointer;'; }
+    else if(isToday){ btn.style.cssText+='background:rgba(26,74,138,.1);color:#1a4a8a;font-weight:800;cursor:pointer;'; }
+    else if(isPast||isWeekend){ btn.style.cssText+='background:transparent;color:#d1d5db;cursor:not-allowed;'; }
+    else { btn.style.cssText+='background:#f8faff;color:#0d1117;cursor:pointer;';
+      btn.onmouseover=()=>{if(!isSelected)btn.style.background='#dde8f8';};
+      btn.onmouseout=()=>{if(!isSelected)btn.style.background='#f8faff';};
     }
-
-    if(!isPast && !isWeekend){
-      cell.onclick = () => selectDate(new Date(y,m,d));
-    }
-    grid.appendChild(cell);
+    if(!isPast&&!isWeekend) btn.onclick=()=>calPickDate(new Date(y,m,d));
+    grid.appendChild(btn);
   }
 }
 
-function selectDate(date){
-  selectedDate = date;
-  selectedTime = null;
-  renderCalendar();
-  renderTimeSlots(date);
-  updateApptSummary();
+function calPickDate(date){
+  calSelected=date; calSelectedTime=null;
+  renderCalendar(); renderTimeSlots(date); updateApptUI();
 }
 
 function renderTimeSlots(date){
-  const wrap = document.getElementById('timeSlotsWrap');
-  const label = document.getElementById('selectedDateLabel');
-  const container = document.getElementById('timeSlots');
-  label.textContent = 'Available times on ' + date.toLocaleDateString('en-AU',{weekday:'long',month:'long',day:'numeric'});
-  container.innerHTML = '';
-  wrap.style.display = 'block';
-
-  TIMES.forEach((t,i) => {
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.textContent = t;
-    const booked = BOOKED.includes(i);
-    btn.style.cssText = `padding:.45rem .3rem;border-radius:7px;font-family:'Red Hat Display',sans-serif;font-size:.72rem;font-weight:700;border:1.5px solid;cursor:pointer;transition:all .18s;width:100%;`;
-    if(booked){
-      btn.style.borderColor='#f1f5f9'; btn.style.background='#f9fafb'; btn.style.color='#d1d5db'; btn.style.cursor='not-allowed'; btn.disabled=true;
-    } else {
-      btn.style.borderColor='#e5e9f2'; btn.style.background='#fff'; btn.style.color='#374151';
-      btn.onmouseover=()=>{ if(selectedTime!==t){ btn.style.borderColor='#1a4a8a'; btn.style.color='#1a4a8a'; btn.style.background='#eff6ff';} };
-      btn.onmouseout=()=>{ if(selectedTime!==t){ btn.style.borderColor='#e5e9f2'; btn.style.color='#374151'; btn.style.background='#fff';} };
-      btn.onclick=()=>selectTime(t);
+  const wrap=document.getElementById('timeSlotsWrap');
+  const label=document.getElementById('selectedDateLabel');
+  const container=document.getElementById('timeSlots');
+  label.innerHTML='<i class="fas fa-calendar-day" style="color:#1a4a8a;margin-right:.35rem;"></i>'+
+    date.toLocaleDateString('en-AU',{weekday:'long',month:'long',day:'numeric'});
+  container.innerHTML=''; wrap.style.display='block';
+  const dateStr=date.toISOString().split('T')[0];
+  const booked=getBookedSlots(dateStr);
+  TIME_SLOTS.forEach((t,i)=>{
+    const btn=document.createElement('button');
+    btn.type='button'; btn.textContent=t;
+    const isBooked=booked.has(i);
+    btn.style.cssText='padding:.45rem .3rem;border-radius:7px;font-family:Red Hat Display,sans-serif;font-size:.72rem;font-weight:700;border:1.5px solid;transition:all .18s;width:100%;';
+    if(isBooked){btn.style.cssText+='border-color:#f1f5f9;background:#f9fafb;color:#d1d5db;cursor:not-allowed;text-decoration:line-through;';btn.disabled=true;}
+    else{
+      btn.style.cssText+='border-color:#e5e9f2;background:#fff;color:#374151;cursor:pointer;';
+      btn.onmouseover=()=>{if(calSelectedTime!==t){btn.style.background='#eff6ff';btn.style.borderColor='#1a4a8a';btn.style.color='#1a4a8a';}};
+      btn.onmouseout=()=>{if(calSelectedTime!==t){btn.style.background='#fff';btn.style.borderColor='#e5e9f2';btn.style.color='#374151';}};
+      btn.onclick=()=>calPickTime(t,btn);
     }
     container.appendChild(btn);
   });
 }
 
-function selectTime(time){
-  selectedTime = time;
+function calPickTime(time,btn){
+  calSelectedTime=time;
   document.querySelectorAll('#timeSlots button').forEach(b=>{
-    if(b.textContent===time){ b.style.background='#0d2145'; b.style.borderColor='#0d2145'; b.style.color='#fff'; }
-    else if(!b.disabled){ b.style.background='#fff'; b.style.borderColor='#e5e9f2'; b.style.color='#374151'; }
+    if(!b.disabled){b.style.background='#fff';b.style.borderColor='#e5e9f2';b.style.color='#374151';}
   });
-  updateApptSummary();
+  btn.style.background='#0d2145';btn.style.borderColor='#0d2145';btn.style.color='#fff';
+  updateApptUI();
 }
 
-function updateApptSummary(){
-  const summary = document.getElementById('apptSummary');
-  const apptText = document.getElementById('apptText');
-  const apptRef = document.getElementById('apptRef');
-  const apptRefText = document.getElementById('apptRefText');
-  if(selectedDate && selectedTime){
-    const str = selectedDate.toLocaleDateString('en-AU',{weekday:'short',month:'short',day:'numeric'}) + ' at ' + selectedTime;
-    summary.style.display='block';
-    apptText.textContent = str;
-    apptRef.style.display='block';
-    apptRefText.textContent = str;
+function updateApptUI(){
+  const summary=document.getElementById('apptSummary');
+  const ref=document.getElementById('apptRef');
+  if(calSelected&&calSelectedTime){
+    const str=calSelected.toLocaleDateString('en-AU',{weekday:'short',month:'long',day:'numeric',year:'numeric'})+' at '+calSelectedTime;
+    document.getElementById('apptText').textContent=str;
+    document.getElementById('apptRefText').textContent=str;
+    document.getElementById('hiddenAppointment').value=str;
+    summary.style.display='block'; ref.style.display='flex';
   } else {
-    summary.style.display='none';
+    summary.style.display='none'; ref.style.display='none';
+    document.getElementById('hiddenAppointment').value='';
   }
 }
 
-function prevMonth(){ calDate.setMonth(calDate.getMonth()-1); renderCalendar(); }
-function nextMonth(){ calDate.setMonth(calDate.getMonth()+1); renderCalendar(); }
+function clearAppointment(){
+  calSelected=null;calSelectedTime=null;
+  document.getElementById('timeSlotsWrap').style.display='none';
+  renderCalendar(); updateApptUI();
+}
 
-// Scale buttons
-function selectScale(btn, scale){
+document.getElementById('prevMonthBtn').onclick=()=>{calCurrent.setMonth(calCurrent.getMonth()-1);renderCalendar();};
+document.getElementById('nextMonthBtn').onclick=()=>{calCurrent.setMonth(calCurrent.getMonth()+1);renderCalendar();};
+
+// ── SCALE BUTTONS ──
+function selectScale(btn,scale){
   document.querySelectorAll('.scale-btn').forEach(b=>b.classList.remove('selected'));
   btn.classList.add('selected');
+  document.getElementById('hiddenScale').value=scale;
 }
 
-// Form submit
-function handleContactSubmit(e){
+// ── FORM SUBMIT (Web3Forms AJAX) ──
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
+
   const btn = document.getElementById('submitBtn');
-  btn.textContent = 'Sending...';
-  btn.style.background='#1a4a8a';
-  btn.disabled=true;
-  setTimeout(()=>{
-    document.getElementById('contactForm').style.display='none';
-    document.getElementById('formSuccess').style.display='block';
-  },1200);
+  const errorDiv = document.getElementById('formError');
+
+  // Clear previous error
+  if(errorDiv) errorDiv.remove();
+
+  // Validate botcheck (honeypot)
+  if(document.querySelector('[name="botcheck"]').checked) return;
+
+  // Loading state
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  btn.disabled = true;
+  btn.style.opacity = '.75';
+
+  const formData = new FormData(this);
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    });
+
+    const json = await res.json();
+
+    if(res.ok && json.success) {
+      // Success
+      this.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } else {
+      // API returned error
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      btn.disabled = false;
+      btn.style.opacity = '1';
+      showFormError(json.message || 'Something went wrong. Please email aaron@amtechsystems.com.au directly.');
+    }
+  } catch(err) {
+    btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+    btn.disabled = false;
+    btn.style.opacity = '1';
+    showFormError('Network error. Please check your connection or email aaron@amtechsystems.com.au directly.');
+  }
+});
+
+function showFormError(msg){
+  let err=document.getElementById('formError');
+  if(!err){err=document.createElement('div');err.id='formError';err.style.cssText='background:#fff5f5;border:1px solid #fecaca;border-radius:9px;padding:.75rem 1rem;font-size:.85rem;color:#dc2626;margin-top:-.5rem;';document.getElementById('submitBtn').before(err);}
+  err.innerHTML='<i class="fas fa-circle-exclamation"></i> '+msg;
 }
 
-// Init calendar on load
-document.addEventListener('DOMContentLoaded', renderCalendar);
-// fallback if DOMContentLoaded already fired
-if(document.readyState !== 'loading') renderCalendar();
+function resetForm(){
+  document.getElementById('contactForm').reset();
+  document.getElementById('contactForm').style.display='flex';
+  document.getElementById('formSuccess').style.display='none';
+  document.getElementById('submitBtn').innerHTML='<i class="fas fa-paper-plane"></i> Send Message';
+  document.getElementById('submitBtn').disabled=false;
+  document.getElementById('submitBtn').style.opacity='1';
+  clearAppointment();
+  document.querySelectorAll('.scale-btn').forEach(b=>b.classList.remove('selected'));
+  document.getElementById('hiddenScale').value='';
+}
 
+// Init
+(function(){ renderCalendar(); })();
 </script>
 
 

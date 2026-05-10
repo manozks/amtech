@@ -297,10 +297,23 @@ footer{background:#070f20;padding:60px 2rem 30px;}
 
 /* ── CONTACT ── */
 .contact{padding:90px 2rem;background:linear-gradient(160deg,#f8faff 0%,#eef3fc 100%);}
-.scale-btn.selected{background:#0d2145 !important;color:#fff !important;border-color:#0d2145 !important;}
-@media(max-width:900px){
-  .contact-layout{grid-template-columns:1fr !important;}
+
+.form-input{
+  width:100%;padding:.75rem 1rem;
+  border:1.5px solid #e5e9f2;border-radius:9px;
+  font-family:'Red Hat Display',sans-serif;font-size:.92rem;color:#0d1117;
+  background:#fff;transition:border-color .2s,box-shadow .2s;outline:none;
+  box-sizing:border-box;
 }
-@media(max-width:580px){
-  .contact-layout form > div[style*="grid-template-columns:1fr 1fr"]{display:flex !important;flex-direction:column !important;}
+.form-input:focus{border-color:#1a4a8a;box-shadow:0 0 0 3px rgba(26,74,138,.08);}
+.form-input::placeholder{color:#b0bac9;}
+.scale-btn{
+  padding:.65rem .5rem;border:1.5px solid #e5e9f2;border-radius:9px;
+  background:#fff;font-family:'Red Hat Display',sans-serif;font-size:.78rem;
+  font-weight:600;color:#374151;cursor:pointer;transition:all .2s;text-align:center;
+  line-height:1.3;
 }
+.scale-btn:hover{border-color:#1a4a8a;color:#1a4a8a;background:#eff6ff;}
+.scale-btn.selected{background:#0d2145;color:#fff;border-color:#0d2145;}
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr !important;}}
+@media(max-width:560px){.form-row{grid-template-columns:1fr !important;}}
