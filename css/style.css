@@ -193,6 +193,8 @@ body{font-family:'Red Hat Display','Red Hat Display',sans-serif;color:var(--ink)
 .fcard-preview.blue{background:linear-gradient(135deg,#dbeafe,#bfdbfe);}
 .fcard-preview.teal{background:linear-gradient(135deg,#d1fae5,#a7f3d0);}
 .fcard-preview.warm{background:linear-gradient(135deg,#fed7aa,#fdba74);}
+.fcard-preview.rose{background:linear-gradient(135deg,#fce7f3,#fbcfe8);}
+.fcard-preview.violet{background:linear-gradient(135deg,#ede9fe,#ddd6fe);}
 .fcard-preview .mockup{width:80px;height:140px;background:#fff;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.12);display:flex;flex-direction:column;overflow:hidden;}
 .mockup-bar{height:10px;background:linear-gradient(90deg,var(--blue),var(--accent));border-radius:0;}
 .mockup-lines{padding:.4rem .5rem;flex:1;display:flex;flex-direction:column;gap:.25rem;}
