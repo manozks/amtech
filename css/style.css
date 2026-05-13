@@ -89,17 +89,15 @@ body{font-family:'Red Hat Display','Red Hat Display',sans-serif;color:var(--ink)
 .mobile-nav-footer a{
   display:block;width:100%;background:#0d1117;color:#fff;font-weight:700;
   font-size:.95rem;padding:.9rem;border-radius:12px;text-align:center;
-  text-decoration:none;transition:background .2s;
+  text-decoration:none;transition:background.2s;
 }
 .mobile-nav-footer a:hover{background:#1e3a6e;}
-
 @media(max-width:640px){
   .nav{padding:10px 1rem;}
   .nav-links,.nav-btn{display:none;}
   .nav-hamburger{display:flex;}
   .nav-pill{border-radius:16px;height:54px;padding:6px 6px 6px 10px;}
 }
-
 /* ── HERO ── */
 .hero{min-height:100vh;background:#ffffff;display:flex;align-items:center;padding-top:68px;position:relative;overflow:hidden;}
 /* .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
