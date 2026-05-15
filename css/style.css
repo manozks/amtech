@@ -85,10 +85,7 @@ body{font-family:'Red Hat Display','Red Hat Display',sans-serif;color:var(--ink)
     object-fit: contain;
 }
  
-  .nav-logo:hover{
-    transform: scale(1.6);
-  }
-
+ 
 
  
   nav a {
