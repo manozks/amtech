@@ -12,42 +12,60 @@
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-pill bg-white/80">
+<!-- ═══ HEADER ═══════════════════════════════════════════════════════ -->
+<header id="site-header">
+  <div class="header-inner">
     <div class="nav-logo">
-      <img src="images/logo.png" alt="AMTECHSYSTEMS Systems Logo" class="nav-logo-img"/>
+    <a href="#" >
+     <img src="images/logo.png" alt="AMTECHSYSTEMS Logo" />
+    </a>
     </div>
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <a href="#contact" class="flex px-4 py-2 mx-3 hidden md:block lg:block rounded-md button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">Get a Free Consultation</a>
-    <button class="nav-hamburger" id="navHamburger" onclick="toggleMobileMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
+ 
+    <nav id="main-nav">
+      <a href="#home"     class="nav-link active" data-section="home">Home</a>
+      <a href="#about"     class="nav-link"         data-section="about">about</a>
+      <a href="#services" class="nav-link"         data-section="services">Services</a>
+       <a href="#contact"  class="nav-link"         data-section="contact">Contact</a>
+    </nav>
+ 
+    <a href="#contact" class="cta-btn">
+Get a Free Consultation</a>
+    <button class="nav-toggle" id="nav-toggle-btn" aria-label="Menu">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <line x1="2" y1="6"  x2="20" y2="6"  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2" y1="11" x2="20" y2="11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="2" y1="16" x2="20" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
     </button>
   </div>
-</nav>
+</header>
 
-<!-- MOBILE DRAWER -->
-<div class="mobile-drawer" id="mobileDrawer" onclick="closeMobileMenu()"></div>
-<div class="mobile-panel" id="mobilePanel">
-  <div class="mobile-panel-header">
-    <img src="images/logo-mobile.png" alt="AMTECHSYSTEMS Systems"/>
-    <button class="mobile-close-btn" onclick="closeMobileMenu()">✕</button>
-  </div>
-  <div class="mobile-nav-links">
-    <a href="#home" onclick="closeMobileMenu()">Home</a>
-    <a href="#about" onclick="closeMobileMenu()">About</a>
-    <a href="#services" onclick="closeMobileMenu()">Services</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-  </div>
-  <div class="mobile-nav-footer">
-    <a href="#contact" onclick="closeMobileMenu()">Get a Free Consultation</a>
+<!-- ═══ MOBILE NAV ═══════════════════════════════════════════════════ -->
+<div class="mobile-overlay" id="mobile-overlay">
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <a href="#" class="logo" onclick="toggleMenu()">
+        <img src="images/logo-mobile.png" alt="AMTECHSYSTEMS Logo" />
+      </a>
+      <button class="mobile-close" onclick="toggleMenu()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    
+    <nav class="mobile-links">
+      <a href="#home"     onclick="toggleMenu()">Home</a>
+      <a href="#about"    onclick="toggleMenu()">About</a>
+      <a href="#services" onclick="toggleMenu()">Services</a>
+      <a href="#contact"  onclick="toggleMenu()">Contact</a>
+    </nav>
+
+    <div class="mobile-footer">
+      <a href="#contact" class="cta-btn w-full text-center" onclick="toggleMenu()">Get a Free Consultation</a>
+    </div>
   </div>
 </div>
+
+
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -196,62 +214,85 @@ We bring enterprise-grade expertise to every engagement — from initial design 
 
 
 <!-- ABOUT -->
-<section id="about" style="padding:100px 2rem;background:#f4f6fb;overflow:hidden;">
+<section id="about" style="padding:70px 2rem;background:#f4f6fb;overflow:hidden;">
   <div style="max-width:1100px;margin:0 auto;">
-    <div class="about-grid" style="display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:center;">
+    <div class="about-grid" style="display:grid;grid-template-columns:1.2fr 1fr;gap:5rem;align-items:center;">
 
       <!-- LEFT: Visual -->
       <div class="fade-in" style="position:relative;">
        
+        <!-- Main Oracle card -->
+        <div class="hero-card" style="position:relative;">
+          <div class="hero-card-header" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+            <!-- <img src="images/hero-bg.jpg" alt="Oracle Simphony POS Consulting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.75);z-index:0;"/> -->
+          
+            <div style="display:flex;align-items:center;gap:.6rem; z-index:50;">
+              <div style="width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;font-family:'Red Hat Display',sans-serif;">O</div>
+              <span style="color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;"> AMTECHSYSTEMS</span>
+            </div>
+            
+          </div>
+          <div class="hero-card-body">
 
-        <!-- Main photo frame -->
-        <div style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 32px 80px rgba(13,33,69,.18);">
-          <!-- Photo placeholder with office/professional feel -->
-          <div style="height:520px;background:linear-gradient(160deg,#0d2145 0%,#1a4a8a 50%,#0f3460 100%);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;">
-
-            <!-- Background grid texture -->
-            <img src="images/about-bg.jpg" alt="Oracle Simphony POS Consulting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.75);z-index:0;"/>
-
-    
-
-            <!-- Stats bar at bottom -->
-            <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.35);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.1);padding:1rem 1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;z-index:1;">
-              <div style="text-align:center;">
-                <div style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;line-height:1;">20<span style="font-size:.9rem;color:rgba(255,255,255,.7);">+</span></div>
-                <div style="font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;">Yrs at Oracle</div>
+            <!-- Experience badges row -->
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-bottom:.9rem;">
+              <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
+                <div class="val" style="color:var(--accent);font-size:1.4rem;">30<span style="font-size:.9rem;">+</span></div>
+                <div class="lbl">Years Hospitality</div>
               </div>
-              <div style="text-align:center;border-left:1px solid rgba(255,255,255,.1);border-right:1px solid rgba(255,255,255,.1);">
-                <div style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;line-height:1;">600<span style="font-size:.9rem;color:rgba(255,255,255,.7);">+</span></div>
-                <div style="font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;">Workstations</div>
+              <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
+                <div class="val" style="color:var(--navy);font-size:1.4rem;">20<span style="font-size:.9rem;">+</span></div>
+                <div class="lbl">Years at Oracle</div>
               </div>
-              <div style="text-align:center;">
-                <div style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.4rem;color:#fff;line-height:1;">30<span style="font-size:.9rem;color:rgba(255,255,255,.7);">+</span></div>
-                <div style="font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem;">Countries</div>
+              <div class="stat-box" style="text-align:center;padding:.75rem .5rem;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.04));border:1px solid rgba(30,144,212,.15);">
+                <div class="val" style="color:var(--accent);font-size:1.4rem;">#1</div>
+                <div class="lbl">APAC Partner</div>
+              </div>
+            </div>
+
+            <!-- Deployment progress -->
+            <div style="background:var(--soft);border-radius:8px;padding:.85rem;margin-bottom:.75rem;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;">
+                <span style="font-size:.78rem;font-weight:700;color:var(--navy);">Simphony Deployments</span>
+                <span style="font-size:.78rem;font-weight:800;color:#c0392b;">Large-Scale APAC</span>
+              </div>
+              <div style="height:6px;background:#e5e9f2;border-radius:3px;overflow:hidden;">
+                <div style="width:88%;height:100%;background:linear-gradient(90deg,#c0392b,#e74c3c);border-radius:3px;"></div>
+              </div>
+              <div style="display:flex;justify-content:space-between;margin-top:.3rem;">
+                <span style="font-size:.67rem;color:var(--mid);">Design → Go-Live → Beyond</span>
+                <span style="font-size:.67rem;font-weight:700;color:#c0392b;">88% complete avg.</span>
+              </div>
+            </div>
+
+            <!-- Service tags -->
+            <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem;">
+              <span style="background:#fff0ee;border:1px solid #fcd5d0;color:#c0392b;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">POS Design</span>
+              <span style="background:#eff6ff;border:1px solid #bfdbfe;color:var(--blue);font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Implementation</span>
+              <span style="background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Go-Live Support</span>
+              <span style="background:#fefce8;border:1px solid #fde68a;color:#92400e;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Post-Live Care</span>
+              <span style="background:#f0fdfa;border:1px solid #99f6e4;color:#0d9488;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Payment Integration</span>
+              <span style="background:#f0fdfa;border:1px solid #99f6e4;color:#0d9488;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">System Migrations</span>
+              <span style="background:#f0fdfa;border:1px solid #99f6e4;color:#0d9488;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Custom Configs</span>
+            </div>
+
+            <!-- Enterprise scale indicator -->
+            <div style="background:linear-gradient(135deg,#0d2145,#1a4a8a);border-radius:8px;padding:.75rem 1rem;display:flex;align-items:center;gap:.75rem;">
+              
+              <div>
+                <div style="color:#fff;font-size:.78rem;font-weight:700;"><i class="fas fa-users"></i> 30,000+</div>
+                <div style="color:rgba(255,255,255,.55);font-size:.7rem;margin-top:.1rem;">Enterprise Customers</div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Floating accent card — top right -->
-        <div style="position:absolute;top:-20px;right:-24px;background:#fff;border-radius:14px;box-shadow:0 12px 36px rgba(13,33,69,.14);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.6rem;border:1px solid #e5e9f2;z-index:2;">
-          <div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,rgba(192,57,43,.1),rgba(192,57,43,.05));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="fas fa-trophy"></i></div>
-          <div>
-            <div style="font-weight:800;font-size:.8rem;color:#0d1117;white-space:nowrap;">APAC's Largest</div>
+          <!-- Floating badges -->
+          <div class="floating-badge badge1" style="color:var(--accent);">
+      
+            <div style="font-weight:800;font-size:.8rem;color:#0d1117;white-space:nowrap;"><i class="fas fa-map-marker-alt"></i> APAC's Largest </div>
             <div style="font-size:.7rem;color:#6b7280;">Simphony Deployments</div>
           </div>
         </div>
-
-        <!-- Floating accent card — bottom left -->
-        <div style="position:absolute;bottom:80px;left:-24px;background:#fff;border-radius:14px;box-shadow:0 12px 36px rgba(13,33,69,.14);padding:.9rem 1.1rem;display:flex;align-items:center;gap:.6rem;border:1px solid #e5e9f2;z-index:2;">
-          <div style="width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.05));display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;"><i class="fas fa-globe"></i></div>
-          <div>
-            <div style="font-weight:800;font-size:.8rem;color:#0d1117;white-space:nowrap;">3,000+ Terminals</div>
-            <div style="font-size:.7rem;color:#6b7280;">F&amp;B Chains Deployed</div>
-          </div>
-        </div>
-
-        <!-- Decorative dot pattern -->
-        <div style="position:absolute;bottom:-16px;right:-16px;width:80px;height:80px;background-image:radial-gradient(circle,#1a4a8a 1.5px,transparent 1.5px);background-size:12px 12px;opacity:.25;z-index:0;"></div>
 
       </div>
 
@@ -826,36 +867,72 @@ And for first-party online ordering — we provide that for free, with zero comm
 </footer>
 
 <script>
-// Nav scroll
-window.addEventListener('scroll',()=>{
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>30);
-});
+  const header = document.getElementById('site-header');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  const navToggle = document.getElementById('nav-toggle-btn');
  
+  /* ── Scroll → pill transition ── */
+  function onScroll() {
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    updateActiveLink();
+  }
+ 
+  window.addEventListener('scroll', onScroll, { passive: true });
+ 
+  /* ── Active link on scroll (intersection) ── */
+  function updateActiveLink() {
+    let current = '';
+    sections.forEach(section => {
+      const top = section.offsetTop - 140;
+      if (window.scrollY >= top) {
+        current = section.id;
+      }
+    });
+ 
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.dataset.section === current);
+    });
+  }
+ 
+  /* ── Active link on click ── */
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+
+  /* ── Mobile Menu Toggle ── */
+  function toggleMenu() {
+    mobileOverlay.classList.toggle('active');
+    if (mobileOverlay.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  navToggle.addEventListener('click', toggleMenu);
+  mobileOverlay.addEventListener('click', (e) => {
+    if (e.target === mobileOverlay) toggleMenu();
+  });
+ 
+  /* Initial check */
+  onScroll();
+</script>
+
+<script>
 // Scroll animations
 const obs = new IntersectionObserver(e=>{
   e.forEach(el=>{ if(el.isIntersecting) el.target.classList.add('visible'); });
 },{threshold:0.1});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
- 
-// Mobile menu
-function toggleMobileMenu(){
-  const panel = document.getElementById('mobilePanel');
-  const drawer = document.getElementById('mobileDrawer');
-  const btn = document.getElementById('navHamburger');
-  const isOpen = panel.classList.contains('open');
-  if(isOpen){ closeMobileMenu(); } else {
-    panel.classList.add('open');
-    drawer.classList.add('open');
-    btn.classList.add('open');
-    document.body.style.overflow='hidden';
-  }
-}
-function closeMobileMenu(){
-  document.getElementById('mobilePanel').classList.remove('open');
-  document.getElementById('mobileDrawer').classList.remove('open');
-  document.getElementById('navHamburger').classList.remove('open');
-  document.body.style.overflow='';
-}
  
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -864,8 +941,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
 });
-
-
 </script>
 
 <script>
