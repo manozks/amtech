@@ -16,10 +16,9 @@
 <header id="site-header">
   <div class="header-inner">
     <div class="nav-logo">
-      <a href="#" class="logo-wrapper">
-        <img src="images/logo-white.png" alt="AMTECHSYSTEMS Logo" class="main-logo" id="header-logo" />
-       
-      </a>
+    <a href="#" >
+     <img src="images/logo.png" alt="AMTECHSYSTEMS Logo" />
+    </a>
     </div>
  
     <nav id="main-nav">
@@ -29,7 +28,7 @@
        <a href="#contact"  class="nav-link"         data-section="contact">Contact</a>
     </nav>
  
-    <a href="#contact" class="cta-btn hidden lg:block px-4 py-2 rounded-full button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]">
+    <a href="#contact" class="cta-btn">
 Get a Free Consultation</a>
     <button class="nav-toggle" id="nav-toggle-btn" aria-label="Menu">
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -46,8 +45,7 @@ Get a Free Consultation</a>
   <div class="mobile-menu">
     <div class="mobile-menu-header">
       <a href="#" class="logo" onclick="toggleMenu()">
-        <img src="images/logo-mobile.png" alt="AMTECHSYSTEMS Logo" style="height:34px;width:auto;" />
-        <span class="mobile-logo-text">AMTECHSYSTEMS</span>
+        <img src="images/logo-mobile.png" alt="AMTECHSYSTEMS Logo" />
       </a>
       <button class="mobile-close" onclick="toggleMenu()">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -70,30 +68,99 @@ Get a Free Consultation</a>
 
 
 <!-- HERO -->
-<section class="hero" id="home" style="color:#fff;">
-  <video autoplay muted loop playsinline preload="auto"
-    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"
-    src="images/hero.mp4"></video>
-  
-  <div class="hero-overlay" style="position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3));z-index:1;"></div>
-
-  <div class="hero-blob hero-blob1" style="z-index:1; opacity:0.3;"></div>
-  <div class="hero-blob hero-blob2" style="z-index:1; opacity:0.3;"></div>
-   <div class="hero-inner" style="position:relative;z-index:10;">
+<section class="hero" id="home">
+  <div class="hero-blob hero-blob1"></div>
+  <div class="hero-blob hero-blob2"></div>
+   <div class="hero-inner">
     <div>
       
-      <h1 style="color:#fff; text-shadow: 0 4px 12px rgba(0,0,0,0.6);">Agile Management for <em>Hospitality Technology</em></h1>
-      <p class="hero-sub" style="color:rgba(255,255,255,0.9); font-weight:500; text-shadow: 0 2px 6px rgba(0,0,0,0.5);"> 
+      <h1>Agile Management for <em>Hospitality Technology</em></h1>
+      <p class="hero-sub"> 
 30+ years in hospitality and customer service delivery experience. 20+ years of Oracle's Simphony deployments in the APAC. 
 We bring enterprise-grade expertise to every engagement — from initial design through to go-live and beyond.</p>
       <div class="hero-btns">
-        <a href="#contact" class="btn-dark" style="background:var(--accent); border-color:var(--accent); color:#fff;">Get a Free Consultation</a>
-        <a href="#solutions" class="btn-outline" style="border-color:rgba(255,255,255,0.4); color:#fff;">Explore solutions →</a>
+        <a href="#contact" class="btn-dark">Get a Free Consultation</a>
+        <a href="#solutions" class="btn-outline">Explore solutions →</a>
       </div>
 
 
     </div>
-   
+   <div class="hero-visual">
+
+      <!-- Main Oracle card -->
+      <div class="hero-card" style="position:relative;">
+        <div class="hero-card-header" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+         <!--   <img src="images/hero-bg.jpg" alt="Oracle Simphony POS Consulting" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.75);z-index:0;"/> -->
+            <video autoplay muted loop playsinline preload="auto"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"
+    src="images/hero.mp4"></video>
+          <div style="display:flex;align-items:center;gap:.6rem; z-index:50;">
+            <div style="width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:900;color:#fff;font-family:'Red Hat Display',sans-serif;">O</div>
+            <span style="color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.04em;">Oracle Simphony POS</span>
+          </div>
+          
+        </div>
+        <div class="hero-card-body">
+
+          <!-- Experience badges row -->
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-bottom:.9rem;">
+            <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
+              <div class="val" style="color:var(--accent);font-size:1.4rem;">30<span style="font-size:.9rem;">+</span></div>
+              <div class="lbl">Years Hospitality</div>
+            </div>
+            <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
+              <div class="val" style="color:var(--navy);font-size:1.4rem;">20<span style="font-size:.9rem;">+</span></div>
+              <div class="lbl">Years at Oracle</div>
+            </div>
+            <div class="stat-box" style="text-align:center;padding:.75rem .5rem;background:linear-gradient(135deg,rgba(30,144,212,.1),rgba(30,144,212,.04));border:1px solid rgba(30,144,212,.15);">
+              <div class="val" style="color:var(--accent);font-size:1.4rem;">#1</div>
+              <div class="lbl">APAC Partner</div>
+            </div>
+          </div>
+
+          <!-- Deployment progress -->
+          <div style="background:var(--soft);border-radius:8px;padding:.85rem;margin-bottom:.75rem;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.5rem;">
+              <span style="font-size:.78rem;font-weight:700;color:var(--navy);">Simphony Deployments</span>
+              <span style="font-size:.78rem;font-weight:800;color:#c0392b;">Large-Scale APAC</span>
+            </div>
+            <div style="height:6px;background:#e5e9f2;border-radius:3px;overflow:hidden;">
+              <div style="width:88%;height:100%;background:linear-gradient(90deg,#c0392b,#e74c3c);border-radius:3px;"></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-top:.3rem;">
+              <span style="font-size:.67rem;color:var(--mid);">Design → Go-Live → Beyond</span>
+              <span style="font-size:.67rem;font-weight:700;color:#c0392b;">88% complete avg.</span>
+            </div>
+          </div>
+
+          <!-- Service tags -->
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.75rem;">
+            <span style="background:#fff0ee;border:1px solid #fcd5d0;color:#c0392b;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">POS Design</span>
+            <span style="background:#eff6ff;border:1px solid #bfdbfe;color:var(--blue);font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Implementation</span>
+            <span style="background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Go-Live Support</span>
+            <span style="background:#fefce8;border:1px solid #fde68a;color:#92400e;font-size:.7rem;font-weight:700;padding:.25rem .65rem;border-radius:100px;">Post-Live Care</span>
+          </div>
+
+          <!-- Enterprise scale indicator -->
+          <div style="background:linear-gradient(135deg,#0d2145,#1a4a8a);border-radius:8px;padding:.75rem 1rem;display:flex;align-items:center;gap:.75rem;">
+            <div style="width:32px;height:32px;background:rgba(255,255,255,.12);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🏢</div>
+            <div>
+              <div style="color:#fff;font-size:.78rem;font-weight:700;">Enterprise-Grade Engagements</div>
+              <div style="color:rgba(255,255,255,.55);font-size:.7rem;margin-top:.1rem;">Hotels · Stadiums · Airports · Theme Parks</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="floating-badge badge1" style="color:var(--accent);">
+          <i class="fas fa-user-graduate"></i>30+ yrs Oracle expertise
+        </div>
+       <!--  <div class="floating-badge badge2" style="color:var(--accent);">
+          <span class="badge-dot"></span> Largest APAC deployments
+        </div> -->
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -777,9 +844,8 @@ And for first-party online ordering — we provide that for free, with zero comm
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-logo" style="display:flex;align-items:center;justify-content:center;gap:12px;">
-        <img src="images/logo-white.png" alt="AMTECHSYSTEMS Logo" style="height:48px;width:auto;" />
-        <span style="font-family:'Red Hat Display',sans-serif;font-weight:900;font-size:1.5rem;color:#fff;letter-spacing:-0.01em;text-transform:uppercase;">AMTECHSYSTEMS</span>
+      <div class="footer-logo text-white font-bold text-2xl text-gradient">
+      <img src="images/logo-white.png" alt="AMTECHSYSTEMS Logo">
       </div>
     </div>
     <div class="footer-links">
@@ -806,16 +872,13 @@ And for first-party online ordering — we provide that for free, with zero comm
   const sections = document.querySelectorAll('section[id]');
   const mobileOverlay = document.getElementById('mobile-overlay');
   const navToggle = document.getElementById('nav-toggle-btn');
-  const headerLogo = document.getElementById('header-logo');
  
   /* ── Scroll → pill transition ── */
   function onScroll() {
     if (window.scrollY > 60) {
       header.classList.add('scrolled');
-      if (headerLogo) headerLogo.src = 'images/logo.png';
     } else {
       header.classList.remove('scrolled');
-      if (headerLogo) headerLogo.src = 'images/logo-white.png';
     }
     updateActiveLink();
   }

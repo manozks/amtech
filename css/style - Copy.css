@@ -67,68 +67,32 @@ body{font-family:'Red Hat Display','Red Hat Display',sans-serif;color:var(--ink)
     padding: 0 1rem;
     height: 58px;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(250, 249, 246, 0.85);
     border-color: var(--header-border);
     backdrop-filter: blur(20px) saturate(160%);
     box-shadow: 0 8px 40px rgba(0,0,0,0.1), 0 0 0 0.5px rgba(0,0,0,0.04) inset;
   }
  
   /* ─── LOGO ──────────────────────────────────────────────────────── */
-  .logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-  }
-
-  .nav-logo .main-logo {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-    transition: filter 0.3s ease;
-    /* Default: White logo via filter if it's normally dark */
-    filter: brightness(0) invert(1);
-  }
-
-  header.scrolled .nav-logo .main-logo {
-    /* Scrolled: Original logo (assuming it's dark/colored) */
-    filter: none;
-  }
-
-  .logo-text {
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 900;
-    font-size: 1.15rem;
-    color: #ffffff;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-
-  header.scrolled .logo-text {
-    color: #0d1117;
-  }
- 
-  .mobile-logo-text {
-    font-family: 'Red Hat Display', sans-serif;
-    font-weight: 900;
-    font-size: 1.05rem;
-    color: #0d1117;
-    text-transform: uppercase;
-  }
- 
   .nav-logo {
    display: flex;
     align-items: center;
     flex-shrink: 0;
 }
-  
+
+   .nav-logo img {
+    height: 46px;
+    object-fit: contain;
+}
+ 
+ 
+
+ 
   nav a {
     font-family: 'DM Sans', sans-serif;
     font-size: 0.875rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    color: #000000;
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
@@ -139,49 +103,61 @@ body{font-family:'Red Hat Display','Red Hat Display',sans-serif;color:var(--ink)
     letter-spacing: 0.01em;
   }
  
-  header.scrolled nav a {
-    color: #0d1117;
-  }
-
   nav a:hover {
-    color: #ffffff;
-    background: rgba(255,255,255,0.1);
-  }
-
-  header.scrolled nav a:hover {
     color: var(--text-primary);
     background: rgba(0,0,0,0.06);
   }
  
   nav a.active {
-    color:#fff; background:rgba(255,255,255,0.15);
-  }
-
-  header.scrolled nav a.active {
     color:var(--accent); background:rgba(30,144,212,0.05);
   }
  
   nav a.active:hover {
-   color:#fff; background:rgba(255,255,255,0.2);
-  }
-
-  header.scrolled nav a.active:hover {
    color:#111827;background:rgba(0,0,0,0.03);
   }
 
+
+ 
+  .cta-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #f5f4f0;
+    background: #1a1a1a;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.55rem 1.4rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      transform 0.15s ease,
+      box-shadow 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.01em;
+  }
+ 
+  .cta-btn:hover {
+    background: #333;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  }
+ 
+  .cta-btn:active {
+    transform: translateY(0);
+  }
+
+
+  /* Mobile nav toggle */
   .nav-toggle {
     display: none;
     background: none;
     border: none;
-    color: #ffffff;
+    color: var(--text-primary);
     cursor: pointer;
     padding: 0.5rem;
     z-index: 200;
-    transition: color 0.3s ease;
-  }
-
-  header.scrolled .nav-toggle {
-    color: #0d1117;
   }
  
   /* ─── MOBILE MENU ────────────────────────────────────────────────── */
