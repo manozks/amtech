@@ -76,9 +76,8 @@ Get a Free Consultation</a>
   <video autoplay muted loop playsinline preload="auto"
     style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"
     src="images/hero.mp4"></video>
+      <div class="hero-overlay"></div>
   
-  <div class="hero-overlay" style="position:absolute;inset:0;background:linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3));z-index:1;"></div>
-
   <div class="hero-blob hero-blob1" style="z-index:1; opacity:0.3;"></div>
   <div class="hero-blob hero-blob2" style="z-index:1; opacity:0.3;"></div>
    <div class="hero-inner" style="position:relative;z-index:10;">
@@ -95,16 +94,16 @@ We bring enterprise-grade expertise to every engagement — from initial design 
         <a href="#features" class="btn-outline" style="border-color:rgba(255,255,255,0.4); color:#fff;">Explore Solutions →</a>
       </div>
     </div>
-
   
   </div>
-</section>
 
-<!-- Scroll cue -->
-  <div style="position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:.5rem;animation:heroFadeUp 1s ease both 1.1s;">
-    <span style="font-size:.62rem;font-weight:700;color:rgba(255,255,255,.28);text-transform:uppercase;letter-spacing:.16em;">Scroll</span>
-    <div style="width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.28),transparent);animation:scrollBlink 2.2s ease infinite;"></div>
-  </div>
+  <!-- Scroll cue -->
+  <a href="#about" class="scroll-cue" style="position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:15;display:flex;flex-direction:column;align-items:center;gap:.5rem;text-decoration:none;animation:heroFadeUp 1s ease both 1.1s;cursor:pointer;">
+    <span style="font-size:.62rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.16em;">Scroll</span>
+    <div style="width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent);animation:scrollBlink 2.2s ease infinite;"></div>
+  </a>
+
+</section>
 
   <style>
     @keyframes heroFadeUp {
@@ -114,6 +113,14 @@ We bring enterprise-grade expertise to every engagement — from initial design 
     @keyframes scrollBlink {
       0%,100% { opacity:.28; }
       50%      { opacity:.6; }
+    }
+    @keyframes phoneScroll {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-50%); }
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
     @media (max-width:640px) {
       #home > div[style*="z-index:3"] {
@@ -128,21 +135,39 @@ We bring enterprise-grade expertise to every engagement — from initial design 
 <div class="trusted">
   <div class="trusted-inner">
     <h3>Experienced delivering for leading brands worldwide</h3>
-    <div class="logo-row">
-      <span class="brand-logo" style="font-size:1.1rem;font-weight:800;letter-spacing:.08em;">ACCOR</span>
-      <span class="brand-logo">IHG</span>
-      <span class="brand-logo" style="font-weight:800;">WYNDHAM</span>
-      <span class="brand-logo serif">MARRIOTT</span>
-      <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">QSRH</span>    
-      <span class="brand-logo serif" style="font-size:.9rem;">RBI</span>
-      <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">YUM</span>
-      <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">NRMA</span>    
-      <span class="brand-logo serif" style="font-size:.9rem;">TAFE</span>
-      <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">P&O CRUISES</span>
-      <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">RACV</span>    
-      <span class="brand-logo serif" style="font-size:.9rem;">CIVEO</span>
+    <div class="logo-marquee-container" style="overflow: hidden; white-space: nowrap; position: relative; padding: 20px 0;">
+      <div class="logo-row-marquee" style="display: flex; width: max-content; animation: marquee 40s linear infinite;">
+        <div class="logo-group" style="display: flex; gap: 4rem; align-items: center; padding-right: 4rem;">
+          <span class="brand-logo" style="font-size:1.1rem;font-weight:800;letter-spacing:.08em;">ACCOR</span>
+          <span class="brand-logo">IHG</span>
+          <span class="brand-logo" style="font-weight:800;">WYNDHAM</span>
+          <span class="brand-logo serif">MARRIOTT</span>
+          <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">QSRH</span>    
+          <span class="brand-logo serif" style="font-size:.9rem;">RBI</span>
+          <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">YUM</span>
+          <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">NRMA</span>    
+          <span class="brand-logo serif" style="font-size:.9rem;">TAFE</span>
+          <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">P&O CRUISES</span>
+          <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">RACV</span>    
+          <span class="brand-logo serif" style="font-size:.9rem;">CIVEO</span>
+        </div>
+        <!-- Duplicate for seamless loop -->
+        <div class="logo-group" style="display: flex; gap: 4rem; align-items: center; padding-right: 4rem;">
+          <span class="brand-logo" style="font-size:1.1rem;font-weight:800;letter-spacing:.08em;">ACCOR</span>
+          <span class="brand-logo">IHG</span>
+          <span class="brand-logo" style="font-weight:800;">WYNDHAM</span>
+          <span class="brand-logo serif">MARRIOTT</span>
+          <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">QSRH</span>    
+          <span class="brand-logo serif" style="font-size:.9rem;">RBI</span>
+          <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">YUM</span>
+          <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">NRMA</span>    
+          <span class="brand-logo serif" style="font-size:.9rem;">TAFE</span>
+          <span class="brand-logo" style="font-size:.72rem;font-weight:800;letter-spacing:.12em;">P&O CRUISES</span>
+          <span class="brand-logo" style="font-weight:800;letter-spacing:.04em;">RACV</span>    
+          <span class="brand-logo serif" style="font-size:.9rem;">CIVEO</span>
+        </div>
+      </div>
     </div>
-   
   </div>
 </div>
 
@@ -169,7 +194,6 @@ We bring enterprise-grade expertise to every engagement — from initial design 
             
           </div>
           <div class="hero-card-body">
-
             <!-- Experience badges row -->
             <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem;margin-bottom:.9rem;">
               <div class="stat-box" style="text-align:center;padding:.75rem .5rem;">
@@ -778,18 +802,21 @@ And for first-party online ordering — we provide that for free, with zero comm
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-logo" style="display:flex;align-items:center;justify-content:center;gap:12px;">
+      <div class="footer-logo" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
         <img src="images/logo-white.png" alt="AMTECHSYSTEMS Logo" style="height:48px;width:auto;" />
-      
+        <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+          <i class="fas fa-certificate" style="color:var(--accent);"></i> Oracle Affiliated Service Provider
+        </div>
       </div>
     </div>
     <div class="footer-links">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#features">Solutions</a>
       <a href="#contact">Contact</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
     </div>
     <div class="footer-socials">
       <a class="social-btn" href="#">𝕏</a>
@@ -875,8 +902,20 @@ document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 // Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    const href = a.getAttribute('href');
+    if (href === '#' || href === '') return;
+    const t=document.querySelector(href);
+    if(t){
+      e.preventDefault();
+      const headerOffset = 80;
+      const elementPosition = t.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
   });
 });
 </script>

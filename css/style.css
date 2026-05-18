@@ -278,7 +278,15 @@ body{font-family:'Red Hat Display','Red Hat Display',sans-serif;color:var(--ink)
 
 
 /* ── HERO ── */
-.hero{min-height:100vh;background:#ffffff;display:flex;align-items:center;padding-top:68px;position:relative;overflow:hidden;}
+.hero{min-height:100vh;background:#0d1117;display:flex;align-items:center;padding-top:68px;position:relative;overflow:hidden;}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+/*
 /*
 .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;}
 .hero-blob1{width:500px;height:500px;background:rgba(30,144,212,.1);top:-80px;right:-80px;}
