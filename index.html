@@ -828,7 +828,30 @@ And for first-party online ordering — we provide that for free, with zero comm
   </div>
 </footer>
 
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
 <script>
+  // Scroll to top functionality
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
   const header = document.getElementById('site-header');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');

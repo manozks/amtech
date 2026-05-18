@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
   body { background: #ffffff; }
-  .legal-content { max-width: 980px; margin: 120px auto 80px; padding: 40px 20px; }
+  .legal-content { max-width: 900px; margin: 120px auto 80px; padding: 40px 20px; }
   .legal-content h1 { font-family: 'Red Hat Display', sans-serif; font-size: 2.5rem; font-weight: 800; color: #0d1117; margin-bottom: 2rem; }
   .legal-content h2 { font-family: 'Red Hat Display', sans-serif; font-size: 1.5rem; font-weight: 700; color: #0d1117; margin-top: 2rem; margin-bottom: 1rem; }
   .legal-content p { font-size: 1rem; color: #4b5563; line-height: 1.7; margin-bottom: 1.25rem; }
@@ -126,7 +126,30 @@
   </div>
 </footer>
 
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
 <script>
+  // Scroll to top functionality
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
   const header = document.getElementById('site-header');
   const headerLogo = document.getElementById('header-logo');
   const mobileOverlay = document.getElementById('mobile-overlay');

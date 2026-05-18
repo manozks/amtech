@@ -506,3 +506,40 @@ footer{background:#070f20;padding:60px 2rem 30px;}
 .scale-btn.selected{background:#0d2145;color:#fff;border-color:#0d2145;}
 @media(max-width:900px){.contact-layout{grid-template-columns:1fr !important;}}
 @media(max-width:560px){.form-row{grid-template-columns:1fr !important;}}
+
+/* ── SCROLL TO TOP ── */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(30, 144, 212, 0.3);
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  background: #1a80bd;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30, 144, 212, 0.4);
+}
